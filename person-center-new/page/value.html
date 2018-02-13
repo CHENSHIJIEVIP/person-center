@@ -1,0 +1,122 @@
+﻿<div class="tlzhjz2">
+	<h3 class="tit"><i class="col-line"></i>投连账户价值</h3>
+	<div class="content">
+		<div class="notice">请选择需要操作的表单</div>
+		<table class="table1">
+			<thead>
+				<tr>
+					<th>保单号</th>
+					<th>产品名称</th>
+					<th>生效日期</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr>
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr class="disshow">
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+				<tr class="disshow">
+					<td>210123456789</td>
+					<td>泰康e理财B款投资连结保险</td>
+					<td>2017/03/23</td>
+					<td>
+						<a href="#/value-detail" class="enter-btn">查询</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!--<a href="javascript:;" onclick="identityBinding()" class="load-more">查看更多<i class="icon"></i></a>-->
+		<div class="fun-box clearfix">
+			<a href="#/summary" class="back-btn fl">返回我的投资页</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function identityBinding() {
+		debugger;
+		var blockNum = $("tbody tr:not('.disshow')").size();
+		var noneNum = $("tbody tr").size();
+		var num = noneNum - blockNum;
+		
+		if(num > 10) {
+			for(var i = 0; i < 10; i++) {
+				var findNum = blockNum + i;
+				$("tbody").find("tr:eq(" + findNum + ")").removeClass('disshow');
+			}
+		} else {
+			for(var i = 0; i < num; i++) {
+				var findNum = blockNum + i;
+				$("tbody").find("tr:eq(" + findNum + ")").removeClass('disshow');
+			}
+		}
+	}
+</script>

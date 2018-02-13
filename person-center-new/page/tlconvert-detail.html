@@ -1,0 +1,464 @@
+﻿<div class="tzzhzh">
+    <h3 class="tit"><i class="col-line"></i>投资账户转换</h3>
+    <div class="content">
+        <ul class="policy-infor clearfix">
+            <li class="fl">产品名称：泰康e理财B款投资连结保险</li>
+            <li class="fl">保单号码：0211123456789</li>
+            <li class="fl">账户价值（元）：999,999</li>
+            <li class="fl">评估日期：2017/10/10</li>
+        </ul>
+        <table class="table1">
+            <thead>
+                <tr>
+                    <th>账户名称</th>
+                    <th>持有单位数</th>
+                    <th>单位净值</th>
+                    <th>账户价值（元）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>行业配置</td>
+                    <td>1000</td>
+                    <td>1.1111</td>
+                    <td>1111.1</td>
+                </tr>
+                <tr>
+                    <td>稳健收益</td>
+                    <td>0</td>
+                    <td>2.2222</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>货币规避</td>
+                    <td>1000</td>
+                    <td>1.3333</td>
+                    <td>3333.1</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table2">
+            <thead>
+                <tr>
+                    <th>转出账户</th>
+                    <th>现有单位数</th>
+                    <th>转出单位数</th>
+                    <th>转入账户</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="analog-select">
+                            <input class="inp inp-out" type="text" name="" value="行业配置行业配置行业" readonly="true" placeholder="">
+                            <i class="horned"></i>
+                            <ul class="select-menu">
+                                <li class="item">平衡配置型投资账户</li>
+                                <li class="item">货币规避</li>
+                                <li class="item">稳健收益</li>
+                                <li class="item">我的投资</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>1000</td>
+                    <td>
+                       <!-- <input type="text" name="convert-out" class="tlconvert-out" placeholder="请输入转出单位数" />-->
+                       <input type="text" name="convert-out" class="tlconvert-out" placeholder="请输入转出单位数" value="请输入转出单位数" onFocus="if (value =='请输入转出单位数'){value =''}" onBlur="if (value ==''){value='请输入转出单位数';}" />
+                    </td>
+                    <td>
+                        <div class="analog-select">
+                            <input class="inp inp-in" type="text" name="" value="稳健收益型投资账户位" readonly="true" placeholder="">
+                            <i class="horned"></i>
+                            <ul class="select-menu">
+                                <li class="item">稳健收益型投资账户</li>
+                                <li class="item">行业配置</li>
+                                <li class="item">货币规避</li>
+                                <li class="item">我的投资</li>
+                            </ul>
+                        </div>
+                        <a href="javascript:;" class="dele-btn"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="javascript:;" class="add-btn"><i class="icon"></i>如需多账户间转换，请点这里。对于一次转换申请，转出账户不能再次申请转入。</a>
+        <dl class="prompt">
+            <dt>操作特别提示：</dt>
+            <dd>
+                <p class="txt">1. 在同一天内，只能申请一次。</p>
+                <p class="txt">2. 在每个保险单年度内，投保人可免费行使5次转换选择权，超过5次的转换本公司将收取投资账户间转换手续费。</p>
+                <p class="txt">3. 投保人连续两次申请转换的时间间隔不得少于5个工作日。</p>
+                <p class="txt">4. 投保人申请账户转换，本公司将按照受理当日下一个评估日的投资单位价格，计算转出金额。</p>
+            </dd>
+        </dl>
+        <div class="fun-box clearfix">
+            <a href="javascript:;" class="enter-btn fl">确认</a>
+            <a href="#/tlconvert" class="back-btn fl">返回上一步</a>
+        </div>
+    </div>
+    <div class="pop-up">
+        <div class="opa"></div>
+        <div class="txt-box">
+            <div class="icon">
+                <img src="img/not-found.png" alt="">
+            </div>
+            <p class="txt">您输入的数据存在错误，请核对！</p>
+            <a href="javascript:;" class="enter-btn">确定</a>
+        </div>
+    </div>
+    <div class="pop-up-convert">
+        <div class="opa"></div>
+        <div class="txt-box">
+            <div class="tit">
+账户转换
+            </div>
+            <div class="convert">
+                <div class="line">
+                    <span class="out">行业配置</span>
+                    <i class='convert-line'><em>1000</em>单位</i>
+                    <span class="in">稳健收益</span>
+                </div>
+            </div>
+            <div class="btn-box">
+                <a href="javascript:;" class="enter-btn">确认</a>
+                <a href="javascript:;" class="cal-btn">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tzzhzh-confirm">
+     <h3 class="tit"><i class="col-line"></i>投资账户转换</h3>
+     <div class="content">
+         <div class="info">
+             <h3 class="sub-msg">您将进行以下账户转换：</h3>
+             <div class="convert-info">
+                 <div class="line">
+                     <span class="out">行业配置</span>
+                     <span class="in">稳健收益</span>
+                     <i class='convert-line'><em>1000</em>单位</i>
+                     
+                 </div>
+                 <!-- <div class="line">
+                     <span class="out">行业配置</span>
+                     <span class="in">稳健收益</span>
+                     <i class='convert-line'><em>1000</em>单位</i>
+                 </div> -->
+             </div>
+             <h3 class="sub-msg">请完成以下两步验证，以保护您的客户权益</h3>
+         </div>
+         <div class="step">
+             <h3 class="step-tit instep">第一步：手机验证</h3>
+             <div class="cont">
+                 <span class="code-to">验证码将发至(<em>152****6108</em>)</span>
+                 <div class="send-code">验证码：<input type="text" name="" class="code-ipt" placeholder="请输入手机验证码"><a href="javascript:;" class="get-code target">获取验证码</a><span class="correct-code">正确</span></div>
+                 <p class="code-alert">请输入正确的验证码</p>
+             </div>
+         </div>
+         <div class="step">
+             <h3 class="step-tit">第二步：人脸识别</h3>
+             <div class="qr-scan">
+                <div class="img-box">
+                 	<div class="qrcode_mask disshow">
+                 	   <span class="qr-msg">请用微信扫描下方二维码</span>
+                       <img src="img/qrcode-verify.jpg" >
+                 	</div>
+                 	<div class="refresh_qrcode_mask">
+                 		 <span class="qr-msg">生成二维码失败，点击刷新重新生成</span>
+                         <img class="qrcode-msg-opacity" src="img/qrcode-verify.jpg" >
+	                     <div class="qrcode-icon-refresh">
+	                       <!--<i class="qrcode-icon-refresh"></i>-->
+	                       <img class="qrcode-icon-failure" src="img/a-freshen.png" width="54" height="54" />
+	                     </div>
+                    </div>
+                </div>
+                 <!--  11.27   -->
+                <div class="qr-error">
+                    <img src="img/not-found.png">
+                    <p>您的错误次数过多，本次交易即将关闭，请重新发起。如有困难请拨打<em>95522</em>获取支持</p>
+                </div>
+                <div class="qr-success">
+                    <img src="img/reset-notice.png">
+                    <p>申请已经提交成功</p>
+                </div>
+             </div>
+         </div>
+         <div class="fun-box clearfix">
+             <a href="javascript:;" class="back-btn fl">返回上一步</a>
+             <!--人脸识别验证通过之后返回列表页面-->
+             <a href="#/tlconvert" class="back-btn_2 fl disshow">返回上一步</a>
+         </div>
+     </div>
+ </div>
+<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+<script type="text/javascript" src='lib/jquery.rotate.min.js'></script>
+<script type="text/javascript">
+	$(function() {
+	    $(".dele-btn").eq(0).hide();
+    });
+    $(document).on("click",function () {
+        $(".tzzhzh .table2 .analog-select .select-menu").slideUp();
+    });
+    $(document).off('click',".tzzhzh .table2 .analog-select .inp").on("click",".tzzhzh .table2 .analog-select .inp",function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(".tzzhzh .table2 .analog-select").removeClass("focus");
+        $(".tzzhzh .table2 .analog-select .select-menu").stop().slideUp();
+        $(this).siblings('.select-menu').stop().slideToggle(300);
+        $(this).closest(".analog-select").addClass("focus");
+        return false;
+    })
+    $(document).on('click','.tzzhzh .table2 .analog-select .item',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        var str=$(this).text();
+        $(this).closest('.analog-select').find('.inp').val(str);
+        $(this).closest('.analog-select').find('.select-menu').stop().slideUp(300);
+        return false;
+    })
+    $(document).off('click',".tzzhzh .table2 .dele-btn").on('click','.tzzhzh .table2 .dele-btn',function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        // console.log(e);
+        //  11-20  仅有一个tr时不能删
+        var trTarget = $(e.currentTarget).parent().parent();
+        if(trTarget.siblings("tr").length !== 0){
+            if(trTarget.siblings("tr").length == 1){
+                $(".dele-btn").hide();
+            }
+            trTarget.remove();
+            
+        }
+        
+    })
+    $(document).on('click','.tzzhzh .pop-up .enter-btn',function(){
+        $('.tzzhzh .pop-up').css('display','none');
+    });
+    $(document).on('click','.pop-up-convert .btn-box .cal-btn',function(){
+        $('.tzzhzh .pop-up-convert').css('display','none');
+    })
+    $(document).off('click',".tzzhzh .add-btn").on('click','.tzzhzh .add-btn',function(){
+     $(".dele-btn").eq(0).show();
+     //$('.tzzhzh .table2 tbody tr:last-child').clone().appendTo('.tzzhzh .table2 tbody');
+     /*$('.tzzhzh .table2 tbody tr:last-child').find(".tlconvert-out").val("");*/
+     // 11.28
+     //$('.tzzhzh .table2 tbody tr:last-child').find(".tlconvert-out").val("请输入转出单位数");
+     $('.tzzhzh .table2 tbody').append(
+		'<tr>' +
+			'<td>' +
+				'<div class="analog-select">' +
+					'<div class="inp inp-out" type="text" div_class="leftDiv" name="" value="" placeholder=""  val_Name="leftDiv">--请选择--</div>' +
+					'<i class="horned"></i>' +
+					'<ul class="select-menu" ul_class="leftUl"></ul>' +
+				'</div>' +
+			'</td>' +
+			'<td td_class="tdClass"><div val_Name="amount">0</div></td>' +
+			'<td><input type="text" name="convert-out" class="tlconvert-out" placeholder="请输入转出单位数" value="请输入转出单位数" onFocus=\"if (value ==\'请输入转出单位数\'){value =\'\'} this.style.color=\'#666\';\" onBlur=\"if (value ==\'\'){value=\'请输入转出单位数\'; this.style.color=\'#999\';}\" /></td>' +
+			'<td>' +
+				'<div class="analog-select">' +
+					'<div class="inp inp-in" type="text" div_class="rightDiv" name="" value="" readonly="true" placeholder=""  val_Name="rightDiv">--请选择--</div>' +
+					'<i class="horned"></i>' +
+					'<ul class="select-menu" ul_class="rightUl"></ul>' +
+				'</div>'+
+				'<a href="javascript:;" class="dele-btn"></a>' +
+			'</td>' +
+		'</tr>'
+	);
+    });
+    
+    //判断输入为非数字
+    $(".table2 .tlconvert-out").on("blur",function(){
+        var val = parseFloat($(this).val());
+        if(!(/^[0-9]*$/.test($(this).val())) | Math.floor($(this).val())>Math.floor($(this).parent().prev("td").html()) | isNaN(val)){
+               $('.tzzhzh .pop-up').css('display','block');
+        }else{
+            $(this).val(val);
+        }
+    });
+    
+    $(document).on('click','.tzzhzh .fun-box .enter-btn',function(){
+    	initTzzhzhConfirm();
+        var valueCheck = [];
+        var valueChecked = true;
+        var valArr = $('.table2 tbody .tlconvert-out');
+        // 11.27
+       var vplaceholde = valArr.eq(0).attr('placeholder');
+        for(var v = 0;v<valArr.length;v++){
+            valueCheck.push($(valArr[v]).val());
+        }
+        //console.log(valueCheck);
+        for(var vv=0;vv<valueCheck.length;vv++){
+            if (valueCheck[vv]==='' || valueCheck[vv] == vplaceholde) {
+                $('.tzzhzh .pop-up').css('display','block');
+                valueChecked=false;
+            }
+        }
+        if(valueChecked){
+            $('.tzzhzh .pop-up-convert').css('display','block');
+        }
+        var result = $('.tzzhzh .pop-up-convert .txt-box .convert .line');
+        if($(result).length>1){
+            for(var j=0;j<$(result).length-1;j++){
+                $(result).eq(j).remove();
+            }
+        }
+        //add by yulianlian on 2017/11/21
+		var resultConfirm = $('.tzzhzh-confirm .convert-info .line');
+		if($(resultConfirm).length > 1) {
+			for(var j = 0; j < $(resultConfirm).length - 1; j++) {
+				$(resultConfirm).eq(j).remove();
+			}
+		}
+				
+        var doConvert = $('.tzzhzh .content .table2 tbody tr');
+        for(var i=0;i<$(doConvert).length;i++){
+            $('.tzzhzh .pop-up-convert .txt-box .convert .line').eq(0).clone().appendTo('.tzzhzh .pop-up-convert .txt-box .convert');
+            $('.tzzhzh .pop-up-convert .txt-box .convert .line').eq(i).find('.out').text($(doConvert).eq(i).find('.analog-select .inp-out').val());
+            $('.tzzhzh .pop-up-convert .txt-box .convert .line').eq(i).find('.in').text($(doConvert).eq(i).find('.analog-select .inp-in').val());
+            $('.tzzhzh .pop-up-convert .txt-box .convert .line').eq(i).find('.convert-line em').text($(doConvert).eq(i).find('td .tlconvert-out').val());
+        }
+        for(var ii=0;ii<$(doConvert).length;ii++){
+            $('.tzzhzh-confirm .convert-info .line').eq(0).clone().appendTo('.tzzhzh-confirm .convert-info');
+            $('.tzzhzh-confirm .convert-info .line').eq(ii).find('.out').text($(doConvert).eq(ii).find('.analog-select .inp-out').val());
+            $('.tzzhzh-confirm .convert-info .line').eq(ii).find('.in').text($(doConvert).eq(ii).find('.analog-select .inp-in').val());
+            $('.tzzhzh-confirm .convert-info .line').eq(ii).find('.convert-line em').text($(doConvert).eq(ii).find('td .tlconvert-out').val());
+        }
+        result = $('.tzzhzh .pop-up-convert .txt-box .convert .line');
+        resultConfirm = $('.tzzhzh-confirm .convert-info .line');
+        $(result).eq($(result).length-1).remove();
+        $(resultConfirm).eq($(resultConfirm).length-1).remove();
+        
+        //清除定时器 
+	    clearInterval(InterValObj);
+        $('.cont .send-code .get-code').eq(0).text('获取验证码').removeClass('disabled');
+        
+        // 账户转换确认页分步验证
+		var setCount = false,
+		    correctCode = '1235';
+		    
+		//验证码 blur 事件
+        $('.send-code .code-ipt').on("blur",function(){
+            var code = $('.tzzhzh-confirm .step .cont .send-code .code-ipt').val(),
+                checkCodeResult =tocheckValidCode(code,correctCode);
+            if(checkCodeResult){
+                clearInterval(InterValObj);
+            }
+        });
+        
+        //验证码输入 keyup 事件
+        $('.send-code .code-ipt').on("keyup",function(){
+            var code = $('.tzzhzh-confirm .step .cont .send-code .code-ipt').val();
+            if((/^\d{4}$/.test(code))){
+                if(code == correctCode){
+                    $('.tzzhzh-confirm .step .cont .send-code .send-code').css('display','none');
+                    $('.tzzhzh-confirm .step .cont .send-code .target').css('display','none');
+                    $('.tzzhzh-confirm .step .cont .send-code .code-ipt').hide();
+                    $('.tzzhzh-confirm .step .cont .send-code .correct-code').css('display','inline-block').text(code);
+                    $('.cont .code-alert').hide();
+                    showQR();
+                }
+            }
+        })
+        
+        //临时设置延迟显示notice
+        var tempShowNotice = setTimeout(function(){
+            $('.tzzhzh-confirm .step .qr-scan .notice').css('display','block');
+        },3000);
+    });
+    
+    //获取账户转换验证，如果验证正确则使jumpConfirm函数返回值为true，跳转验证界面（临时使用statusCode，请根据后台调整）
+    $('.pop-up-convert .btn-box .enter-btn').on('click',function(){
+        $('.tzzhzh .pop-up-convert').css('display','none');
+        var jumpConfirm = true;
+        var requestConfirm = $.ajax({
+            statusCode:{
+                404: function(){
+
+                },
+                200: function(){
+                    jumpConfirm = true;
+                }
+            }
+        });
+        if(jumpConfirm == true){
+            $('.tzzhzh').css('display','none');
+            $('.tzzhzh-confirm').css('display','block');
+        }
+    })
+    setCounting(60,'.get-code');
+    $('.tzzhzh-confirm .fun-box .back-btn').on('click',function(){
+        $('.tzzhzh-confirm').css('display','none');
+        $('.tzzhzh').css('display','block');
+    });
+    
+    //--------------add by yulianlian on 2017/11/24----------------
+	// 初始化账户转化验证区域
+	function initTzzhzhConfirm() {
+		var _container = $('.tzzhzh-confirm');
+		_container.find('.qr-scan').hide();
+		_container.find('.send-code .code-ipt').removeAttr("disabled").val("").show();
+		$('.tzzhzh-confirm .step .cont .send-code .target').css('display', 'inline-block');
+		$('.tzzhzh-confirm .step .cont .send-code .correct-code').css('display', 'none');
+		$('.tzzhzh-confirm .step .cont .code-alert').css('display','none');
+	}
+
+	//验证 验证码 错误状态码 
+	function tocheckValidCode(code, correctCode) {
+		var placeholder = $('.tzzhzh-confirm .step .cont .send-code .code-ipt').attr('placeholder');
+	    if(code == '' || code == placeholder) {
+			$('.cont .code-alert').text('请输入验证码').removeClass('right').removeClass('wrong').addClass('wrong').show();
+		} else if(!(/^\d{4}$/.test(code))) {
+			$('.cont .code-alert').removeClass("right").removeClass("wrong").addClass('wrong').show().text('请输入4位验证码');
+		} else if((/^\d{4}$/.test(code))) {
+			if(code == correctCode) {
+				$('.tzzhzh-confirm .step .cont .send-code .send-code').css('display', 'none');
+				$('.tzzhzh-confirm .step .cont .send-code .target').css('display', 'none');
+				$('.tzzhzh-confirm .step .cont .send-code .code-ipt').hide();
+                $('.tzzhzh-confirm .step .cont .send-code .correct-code').css('display','inline-block').text(code);
+				$('.cont .code-alert').hide();
+				showQR();
+				return true;
+			} else {
+					$('.cont .code-alert').removeClass("right").removeClass("wrong").addClass('wrong').show().text('验证码错误');
+			}
+		}
+		return false;
+	}
+	var value2=0;
+	function showQR(){
+		$('.tzzhzh-confirm .step .qr-scan').css('display','block');
+		$("#img7").rotate({
+			bind:
+			{
+				click: function() {
+					value2 += 180;
+					$(this).rotate({
+						animateTo: value2
+					})
+				}
+			}
+		});
+	}
+    //人脸识别成功后，返回保单列表页
+    function bacTlconvert(){
+        $('.fun-box .back-btn').hide();
+        $('.fun-box .back-btn_2').show();
+    }
+	//--------------add by yulianlian on 2017/11/24 end ----------------
+	/*$(".qrcode-icon-refresh").on("click",function(){
+		$(this).rotate({
+			 angle: 0,
+	         animateTo: 180
+		})
+	});*/
+	/*$(".qrcode-icon-refresh").rotate({
+	    bind: {
+	        click: function () {
+	        	debugger;
+	            $(this).rotate({
+	                angle: 0,
+	                animateTo: 180
+	            })
+	        }
+	    }
+   });*/
+</script>

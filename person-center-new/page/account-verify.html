@@ -1,0 +1,125 @@
+﻿<div class="account-verify">
+    <h3 class="tit"><i class="col-line"></i>身份验证</h3>
+    <div class="content">
+    	<span class="notice">请输入正确的姓名与证件号码，以保证后续的查阅、交易等服务能够正常进行。</span>
+    	<div class="verify-title-display"><span class="verify-title">身份已验证</span></div>
+    	<div class="pwd">
+    		<div class="acont-name">
+    			姓名：<input type="text" name="" class="name-ipt ipt" placeholder="请输入您的姓名"><span class="alert"></span>
+    		</div>
+			<div class="acont-type">
+				<span class="acont-num-tit">证件类型：</span>
+				<div class="dropdown">
+					<a href="javascript:;" class="type-ipt ipt">请选择证件类型<i class="drop-icon"></i></a>
+					<ul class="sub-menu">
+						<li>身份证</li>
+						<li>军官证</li>
+						<li>护照</li>
+					</ul>
+				</div>
+				<span class="alert"></span>
+			</div>
+			<div class="acont-num">
+				证件号码：<input type="text" name="" class="number-ipt ipt" placeholder="请输入您的证件号码"><span class="alert"></span>
+			</div>
+			<div class="reg-phone">
+				注册手机号：
+				<span class="reg-num" style=" display: inline-block;height: 40px;line-height: 40px;">15200004568</span>
+			</div>
+			<div > <!--class="disshow"-->
+				<div class="acont-phone">
+				绑定手机号：<input type="text" name="" class="phone-ipt ipt" placeholder="请输入您的手机号码"><span class="alert"></span>
+				</div>
+				<div class="acont-msgcode">
+					短信验证码：<input type="text" name="" class="code-ipt ipt" placeholder="请输入短信验证码"><a href="javascript:;" class="send-code send-code2 disabled">获取验证码</a><span class="alert"></span>
+				</div>
+			</div>
+			<a href="javascript:;" class="confirm-info-btn">提交</a>
+    	</div>
+    </div>
+</div>
+<!-- 身份验证成功 -->
+<div class="sucessTip">
+	<img src="img/reset-notice.png">
+	<h3>恭喜您，身份验证成功！</h3>
+</div>
+<!-- 错误信息提示弹窗 -->
+<div class="pop-up" style="">
+    <div class="opa"></div>
+    <div class="txt-box">
+        <div class="icon">
+            <img src="img/not-found.png" alt="">
+        </div>
+        <p class="txt">这里是一些错误信息！</p>
+        <a href="javascript:;" class="enter-btn">确定</a>
+    </div>
+</div>
+<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+<script type="text/javascript">
+	$(".account-verify .notice").hide();
+	$('.pwd .dropdown .type-ipt').on('click',function(){
+		$(this).siblings('.sub-menu').slideToggle(300);
+	})
+	$('.pwd .dropdown .sub-menu li').on('click',function(){
+		$(this).parent('.sub-menu').slideUp(300);
+		$('.pwd .dropdown .type-ipt').html($(this).text()+'<i class="drop-icon"></i>');
+		$(this).parent().parent().siblings('.alert').text("").removeClass('wrong').addClass('right');
+	})
+	setCounting(60,'.send-code2')
+	checkName('.name-ipt');
+	checkPhone('.phone-ipt');
+	checkIdentificationNum('.type-ipt','.acont-num .number-ipt');
+	
+	// 验证码
+    var correctCode = '',
+    correctCode = '1235';
+	checkValidCode('.code-ipt',correctCode);
+	
+    //点击提交事件  验证以上表单
+	$(".confirm-info-btn").click(function(){
+		debugger;
+		//先验证表单输入
+		var nameOK = toCheckName('.name-ipt');
+		var identificationNumOK = checkIdentification('.type-ipt','.acont-num .number-ipt');
+		var phoneOK = toCheckPhone('.phone-ipt');
+		var validCodeOK = toCheckValidCode('.code-ipt',correctCode);
+		if(nameOK&&identificationNumOK&&phoneOK&&validCodeOK){
+			alert("输入完全正确，可以提交");
+			//----add by yulianlian on 2017/11/25-----
+			//修改密码成功之后界面的处理
+			$(".account-verify").hide();
+			$(".sucessTip").show();
+			//---add by yulianlian on 2017/11/25 end---
+			return true;
+		}
+		return false;
+	})
+
+	// 错误信息弹窗关闭
+    $('.pop-up .enter-btn').click(function(){
+    	$(this).parent().parent().hide();
+    	window.location .reload(); 
+    })
+    //add by yulianlian on 2017/11/27 手机号变化时，验证码复位的问题
+   /* $('.acont-phone .phone-ipt').on("blur",function(){
+    	if(toCheckPhone('.acont-phone .phone-ipt')){
+    		$(this).addClass('iptDone');
+    		$('.acont-msgcode .code-ipt').attr("disabled",false);
+    	}
+    })*/
+	$('.acont-phone .phone-ipt').bind('input propertychange',function(){
+    	//if($(this).hasClass('iptDone')){
+		var phoneFlag = toCheckPhone('.acont-phone .phone-ipt');
+    	if(phoneFlag){
+    		$('.acont-msgcode .code-ipt').attr("disabled",false);
+    		$('.acont-msgcode .send-code').removeClass('disabled');
+    		$('.acont-msgcode .alert').text('').hide();
+    	}else{
+    		//验证码输入初始化
+    		initValidCodeIpt(".acont-msgcode");
+    	}
+    	//}
+    })
+    /*$('.name-ipt').unbind();
+    $('.phone-ipt').unbind();*/
+</script>

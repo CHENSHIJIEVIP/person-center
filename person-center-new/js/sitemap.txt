@@ -1,0 +1,200 @@
+
+{
+    "undefined": [ ], 
+    "/baodan": [
+        [
+            "我的保单", 
+            "#/baodan"
+        ]
+    ], 
+    "/baodan-detail": [
+        [
+            "我的保单", 
+            "#/baodan"
+        ], 
+        [
+            "保单详情", 
+            "#/baodan-detail"
+        ]
+    ], 
+    "/summary": [
+        [
+            "我的投资", 
+            "#/summary"
+        ]
+    ], 
+    "/value": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户价值", 
+            "#/value"
+        ]
+    ], 
+    "/value-detail": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户价值", 
+            "#/value"
+        ], 
+        [
+            "投连账户价值详情", 
+            "#/value-detail"
+        ]
+    ], 
+    "/record": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+        	"投连交易记录",
+        	"#/record"
+        ]
+    ], 
+    "/record-detail": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连交易记录", 
+            "#/record"
+        ], 
+        [
+            "投连交易记录详情", 
+            "#/record-detail"
+        ]
+    ], 
+    "/tlconvert": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户转换", 
+            "#/tlconvert"
+        ]
+    ], 
+    "/tlconvert-detail": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户转换", 
+            "#/tlconvert"
+        ], 
+        [
+            "投连账户转换详情", 
+            "#/tlconvert-detail"
+        ]
+    ], 
+    "/investment-account": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户部分领取", 
+            "#/investment-account"
+        ]
+    ], 
+    "/investment-account-detail": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户部分领取", 
+            "#/investment-account"
+        ]
+    ], 
+    "/investment-account-next": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户部分领取", 
+            "#/investment-account"
+        ]
+    ], 
+    "/addtional-investment": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户追加投资", 
+            "#/addtional-investment"
+        ]
+    ], 
+    "/addtional-investment-detail": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户追加投资", 
+            "#/addtional-investment"
+        ]
+    ], 
+     "/addtional-investment-next": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户追加投资", 
+            "#/addtional-investment"
+        ]
+    ], 
+    "/investment/policy-list": [
+        [
+            "我的投资", 
+            "#/summary"
+        ], 
+        [
+            "投连账户定期投资", 
+            "#/investment/policy-list"
+        ]
+    ], 
+    "/wangdian": [
+        [
+            "服务网点", 
+            "#/wangdian"
+        ]
+    ], 
+    "/service": [
+        [
+            "尊享服务", 
+            "#/service"
+        ]
+    ], 
+    "/account-verify": [
+        [
+            "账号管理", 
+            "javascript:;"
+        ], 
+        [
+            "身份验证", 
+            "#/account-verify"
+        ]
+    ], 
+    "/account-resetpwd": [
+        [
+            "账号管理", 
+            "javascript:;"
+        ], 
+        [
+            "密码修改", 
+            "#/account-resetpwd"
+        ]
+    ]
+}

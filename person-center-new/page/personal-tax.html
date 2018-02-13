@@ -1,0 +1,487 @@
+<!--纳税声明基本信息  add by zhanghuan on 2017/12/28-->
+<div class="wrap_common nssfsm nssfsmjbxx">
+	<h3 class="tit"><i class="col-line"></i>个人纳税声明</h3>
+	<div class="content">
+		<p class="prompt"><i class="icon"></i>为了加强税收征管，打击跨境逃避税，履行金融账户涉税信息自动交换国际业务，依法在中华人民共和国境内设立的金融机构需开展非居民金融账户涉税信息尽职调查的工作。识别非居民金融账户，并报送账户相关信息。</p>
+		<table class="table1">
+			<thead>
+				<tr>
+					<th colspan="4">基本信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray">姓名</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder personal_name empty" placeholder="请输入姓名" value="请输入姓名" />
+					</td>
+					<td class="gray">性别</td>
+					<td>
+						<div class="radio-choose">
+							<span class="radio-sax radio-male">
+								<i class="radio-circle"></i><span>男</span>
+							</span>
+							<span class="radio-sax radio-female">
+								<i class="radio-circle"></i><span>女</span>
+							</span>
+							<span class="radio-sax radio-other">
+								<i class="radio-circle"></i><span>不详</span>
+							</span>
+						</div>
+						<span class="tax-tip-select tax-tip-sax">请选择性别</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="gray">证件类型</td>
+					<td>
+						<div class="analog-select tax_certificate">
+							<input class="inp inp-in empty" type="text" name="" value="请选择类型" readonly="true" placeholder="请选择类型">
+							<i class="horned"></i>
+							<ul class="select-menu">
+								<li class="item">身份证</li>
+								<li class="item">军官证</li>
+								<li class="item">外国人永久居留证</li>
+								<li class="item">其他</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select">请选择类型</span>
+					</td>
+					<td class="gray">证件号码</td>
+					<td><input type="text" name="inverstment_out" class="inverstment_out noborder personal_num empty" placeholder="请输入证件号码" value="请输入证件号码" /></td>
+				</tr>
+				<tr>
+					<td class="gray">出生日期</td>
+					<td>
+						<p class="choose-date"><input id='mydatepicker' class='empty' type='text' placeholder="请选择日期" readonly="true"/><span class="tax-tip-select">请选择日期</span></p>
+					</td>
+					<td class="gray">手机号码</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder personal_phone empty" placeholder="请输入手机号码" value="请输入手机号码" />
+					</td>
+				</tr>
+				<tr>
+					<td class="gray">本人声明</td>
+					<td colspan="3">
+						<div class="analog-select tax_type">
+							<input class="inp inp-in empty" type="text" name="" value="请选择纳税类型" readonly="true" placeholder="请选择纳税类型">
+							<i class="horned"></i>
+							<ul class="select-menu">
+								<li class="item">仅为中国税收居民</li>
+								<li class="item">仅为非居民</li>
+								<li class="item">既是中国税收居民又是其他国家（地区）税收居民</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select tax-tip-type">请选择纳税类型</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="account_choose">
+			<i class="account_agree" style="border:1px solid #ccc"></i>
+			<div class="account_txt" style="font-size: 14px;">
+				本人确认上述信息的真实、准确和完整，且当这些信息发生变更时，将在30日内通知贵机构， 否则本人承担由此造成的不利后果。
+			</div>
+		</div>
+		<div class="tax_prompts clearfix">
+			<p class="tax_tip">注释说明：</p>
+			<p class="tax_txt">1. 中国税收居民：是指在中国境内有住所，或者无住所而在境内居住满一年的个人。在中国境内有住所是指因户籍、家庭、经济利益关系而在中国境内习惯性居住。在境内居住满一年，是指在一个纳税年度中在中国境内居住365日。临时离境的，不扣减日数。临时离境，是指在一个纳税年度中一次不超过30日或者多次累计不超过90日的离境。</p>
+			<p class="tax_txt">2. 非居民：是指中国税收居民以外的个人。其他国家（地区）税收居民身份认定规则及纳税人识别号相关信息请参见国家税务总局网站（<a href="http://www.chinatax.gov.cn/aeoi_index.html" target="_blank">http://www.chinatax.gov.cn/aeoi_index.html</a>）。</p>
+			<p class="tax_txt">3. 军人、武装警察无需填写此声明文件。</p>
+		</div>
+		<div class="fun-box clearfix">
+			<a href="javascript:;" class="next-btn fl disabled">下一步</a>
+		</div>
+	</div>
+</div>
+<!--纳税声明查看信息  中国居民  add by zhanghuan on 2017/1/2-->
+<div class="wrap_common nssfsm nssfsmckxx disshow">
+	<h3 class="tit"><i class="col-line"></i>个人纳税声明</h3>
+	<div class="content">
+		<div class="notice">请核对基本信息</div>
+		<table class="table1 ckxx_info">
+			<thead>
+				<tr>
+					<th colspan="4">基本信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray">姓名</td>
+					<td>张三</td>
+					<td class="gray">性别</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td class="gray">证件类型</td>
+					<td>身份证</td>
+					<td class="gray">证件号码</td>
+					<td>110101188001011100</td>
+				</tr>
+				<tr>
+					<td class="gray">出生日期</td>
+					<td>1980年1月1日</td>
+					<td class="gray">手机号码</td>
+					<td>13011001234</td>
+				</tr>
+				<tr>
+					<td class="gray">本人声明</td>
+					<td colspan="3">仅为中国税收居民</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>
+			<i class="safety"></i>
+			<span class="sub-msg">请完成手机验证，以保障您的信息安全</span>
+		</h3>
+		<div class="step">
+			<div class="cont">
+				<span class="code-to">验证码将发至(<em>152****6108</em>)</span>
+				<div class="phone-verify">
+
+				</div>
+			</div>
+			<div class="qr-error disshow">
+				<img src="img/not-found.png">
+				<p class="fail-msg">提交纳税声明失败</p>
+			</div>
+		    <div class="qr-success disshow">
+				<img src="img/reset-notice.png">
+				<p>纳税声明提交成功</p>
+			</div>
+		</div>
+		<div class="fun-box fun-box-two clearfix">
+			<a href="javascript:;" class="back-btn fl">返回上一步</a>
+			<a href="javascript:;" class="submit-btn fl">提交</a>
+		</div>
+	</div>
+</div>
+<!--纳税声明纳税信息  其他两种  add by zhanghuan on 2017/1/2-->
+<div class="wrap_common nssfsm nssfsmnsxx disshow">
+	<h3 class="tit"><i class="col-line"></i>个人纳税声明</h3>
+	<div class="content">
+		<table class="table1 tax_content">
+			<thead>
+				<tr>
+					<th colspan="4">出生地信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray"><em>*</em>姓（英文）</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty personal_name_xing" placeholder="请输入" value="请输入" />
+					</td>
+					<td class="gray"><em>*</em>名（英文）</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty personal_name_ming" placeholder="请输入" value="请输入" />
+					</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>出生地（英文）</td>
+					<td>
+						<div class="analog-select tax_born_en">
+							<input class="inp inp-in empty" type="text" name="" value="请选择出生地" readonly="true" placeholder="请选择出生地">
+							<i class="horned"></i>
+							<ul class="select-menu select-menu-other">
+								<li class="item">England</li>
+								<li class="item">France</li>
+								<li class="item">America</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select">请选择出生地</span>
+					</td>
+					<td class="gray">出生地（中文）</td>
+					<td>
+						<div class="analog-select tax_born_ch">
+							<input class="inp inp-in empty" type="text" name="" value="请选择出生地" readonly="true" placeholder="请选择出生地">
+							<i class="horned"></i>
+							<ul class="select-menu select-menu-other">
+								<li class="item">英国</li>
+								<li class="item">法国</li>
+								<li class="item">美国</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select">请选择出生地</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="gray">出生地-其他信息（英文）</td>
+					<td colspan="3">
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty tax_born_other" placeholder="请输入现居住地址" value="请输入现居住地址" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 address_now_table">
+			<thead>
+				<tr>
+					<th colspan="6">现居住地址（英文）</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray"><em>*</em>国家（地区）</td>
+					<td colspan="3">
+						<div class="analog-select address_country">
+							<input class="inp inp-in empty" type="text" name="" value="请选择国家（地区）" readonly="true" placeholder="请选择国家（地区）">
+							<i class="horned"></i>
+							<ul class="select-menu select-menu-other">
+								<li class="item">英国</li>
+								<li class="item">法国</li>
+								<li class="item">美国</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select">请选择国家（地区）</span>
+					</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>省</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty address_province" placeholder="请输入省（地区）" value="请输入省（地区）" />
+					</td>
+					<td class="gray"><em>*</em>市</td>
+					<td>
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty address_city" placeholder="请输入市（地区）" value="请输入市（地区）" />
+					</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>详细地址</td>
+					<td colspan="3">
+						<input type="text" name="inverstment_out" class="inverstment_out noborder empty address_now_detail" placeholder="请输入详细地址" value="请输入详细地址" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 tax_info_table">
+			<thead>
+				<tr>
+					<th colspan="5">纳税信息<span class="complete_add fr">新增</span></th>
+				</tr>
+			</thead>
+			<tbody style="border: 0;">
+				<tr>
+					<td class="gray info_country">税收居民国（地区）</td>
+					<td class="info_num">
+						<div class="analog-select complete_country">
+							<input class="inp inp-in empty" type="text" name="" value="请选择" readonly="true" placeholder="请选择">
+							<i class="horned"></i>
+							<ul class="select-menu select-menu-other">
+								<li class="item">英国</li>
+								<li class="item">法国</li>
+								<li class="item">美国</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select">请选择</span>
+					</td>
+					<td class="gray info_num">纳税人识别号</td>
+					<td class="tax-info-num">
+						<input name="inverstment_out" class="inverstment_out noborder complete_num" placeholder="请输入纳税人识别号" value="请输入纳税人识别号">
+					</td>
+					<td rowspan="2" class="info_operation"><i class="complete_delete"></i></td>
+				</tr>
+				<tr>
+					<td class="gray tax-noreason">无纳税人识别号原因</td>
+					<td colspan="3" class="tax-no">
+						<div class="analog-select complete_reason">
+							<input class="inp inp-in empty" type="text" name="" value="请选择" readonly="true" placeholder="请选择">
+							<input type="text" name="inverstment_out" class="inverstment_out noborder complete_reason_other disshow" placeholder="请输入原因" value="请输入原因" />
+							<i class="horned"></i>
+							<ul class="select-menu select-menu-reason">
+								<li class="item">居民国地区不发放纳税人识别号</li>
+								<li class="item">其他</li>
+							</ul>
+						</div>
+						<span class="tax-tip-select tax-tip-reason">请选择</span>
+					</td>
+				</tr>
+				<tr ><td colspan="5" style="height:10px; border: 0;" ></td></tr>
+			</tbody>
+		</table>
+		<div class="account_choose">
+			<i class="account_agree" style="border:1px solid #ccc"></i>
+			<div class="account_txt" style="font-size: 14px;">
+				本人确认上述信息的真实、准确和完整，且当这些信息发生变更时，将在30日内通知贵机构， 否则本人承担由此造成的不利后果。
+			</div>
+		</div>
+		<div class="fun-box fun-box-two clearfix">
+			<a href="javascript:;" class="back-btn fl">返回上一步</a>
+			<a href="javascript:;" class="next-btn fl disabled">下一步</a>
+		</div>
+	</div>
+</div>
+<!--纳税声明查看信息  其他两种  add by zhanghuan on 2017/1/2-->
+<div class="wrap_common nssfsm nssfsmckxx_other disshow">
+	<h3 class="tit"><i class="col-line"></i>个人纳税声明</h3>
+	<div class="content">
+		<div class="notice">请核对信息</div>
+		<table class="table1 basic_info">
+			<thead>
+				<tr>
+					<th colspan="4">基本信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray">姓名</td>
+					<td>张三</td>
+					<td class="gray">性别</td>
+					<td>男</td>
+				</tr>
+				<tr>
+					<td class="gray">证件类型</td>
+					<td>身份证</td>
+					<td class="gray">证件号码</td>
+					<td>110101188001011100</td>
+				</tr>
+				<tr>
+					<td class="gray">出生日期</td>
+					<td>1980年1月1日</td>
+					<td class="gray">手机号码</td>
+					<td>13011001234</td>
+				</tr>
+				<tr>
+					<td class="gray">本人声明</td>
+					<td colspan="3">仅为非居民</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 tax_content">
+			<thead>
+				<tr>
+					<th colspan="4">出生地信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray"><em>*</em>姓（英文）</td>
+					<td>XXXXXXXX</td>
+					<td class="gray"><em>*</em>名（英文）</td>
+					<td>XXXXXX</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>出生地（英文）</td>
+					<td>XXXXXXXX</td>
+					<td class="gray">出生地（中文）</td>
+					<td>XXXXXXX</td>
+				</tr>
+				<tr>
+					<td class="gray">出生地-其他信息（英文）</td>
+					<td colspan="3" class="check-length">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 address_now_table">
+			<thead>
+				<tr>
+					<th colspan="6">现居住地址（英文）</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray"><em>*</em>国家（地区）</td>
+					<td colspan="3">XXXXXXX</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>省</td>
+					<td>XXXXXX</td>
+					<td class="gray"><em>*</em>市</td>
+					<td>XXXXX</td>
+				</tr>
+				<tr>
+					<td class="gray"><em>*</em>详细地址</td>
+					<td colspan="3">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 tax_info_check">
+			<thead>
+				<tr>
+					<th colspan="2">纳税信息</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="gray info-check-width">税收居民国（地区）</td>
+					<td class="info-check-other">法国</td>
+				</tr>
+				<tr>
+					<td class="gray info-check-width">纳税人识别号</td>
+					<td class="info-check-other">1453333777977790000065433456</td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="table1 tax_info_check">
+			<tbody>
+				<tr>
+					<td class="gray info-check-width">税收居民国（地区）</td>
+					<td class="info-check-other">法国</td>
+				</tr>
+				<tr>
+					<td class="gray info-check-width">无纳税人识别号原因</td>
+					<td class="info-check-other">居民国（地区）不发放纳税人识别号</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>
+			<i class="safety"></i>
+			<span class="sub-msg">请完成手机验证，以保障您的信息安全</span>
+		</h3>
+		<div class="step">
+			<div class="cont">
+				<span class="code-to">验证码将发至(<em>152****6108</em>)</span>
+				<div class="phone-verify">
+
+				</div>
+			</div>
+			<div class="qr-error disshow">
+				<img src="img/not-found.png">
+				<p class="fail-msg">提交纳税声明失败</p>
+			</div>
+		    <div class="qr-success disshow">
+				<img src="img/reset-notice.png">
+				<p>纳税声明提交成功</p>
+			</div>
+		</div>
+		<div class="fun-box fun-box-two clearfix">
+			<a href="javascript:;" class="back-btn fl">返回上一步</a>
+			<a href="javascript:;" class="submit-btn fl">提交</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="lib/dCalendar/dcalendar.picker.js"></script>
+<script src="lib/Taikang/phone-verify.js"></script>
+<script src="js/personal-tax.js"></script>
+<script>
+	//中国居民 查看信息页面验证
+	$('.nssfsmckxx .phone-verify').phoneVerify({
+		policyNumber: 1,
+		secene: 1,
+		interval: 60,
+		serviceUrl: "http://127.0.0.1:8080/udp-web",
+		success: function() {
+			alert("验证成功");
+			//......后续操作
+		},
+		error: function() {
+			alert('验证失败！');
+		}
+	});
+	//其他两种   查看信息页面验证	
+	$('.nssfsmckxx_other .phone-verify').phoneVerify({
+		policyNumber: 1,
+		secene: 1,
+		interval: 60,
+		serviceUrl: "http://127.0.0.1:8080/udp-web",
+		success: function() {
+			alert("验证成功");
+			//......后续操作
+		},
+		error: function() {
+			alert('验证失败！');
+		}
+	});
+	//初始化日期选择器
+	$('#mydatepicker').dcalendarpicker({
+		format: 'yyyy-mm-dd'
+	});
+</script>

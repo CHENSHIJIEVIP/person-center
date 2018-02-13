@@ -1,0 +1,63 @@
+<!--2018/1/16 by zhangwei-->
+<div class="wrap_common invest-modify">
+    <h3 class="tit"><i class="col-line"></i>投资账户定期投资</h3>
+    <div class="content">
+        <div class="content-delete">
+            <p class="delete-policy"><i class="icon-delete"></i>您将取消&nbsp;<span class="orange">产品名称（210123456789）</span>&nbsp;的定期投资</p>
+            <p class="delete-step"><i class="icon-interests"></i>请完成以下两步验证，以保护您的客户权益</p>
+            <div class="step">
+                <h3 class="step-tit instep">第一步：手机验证</h3>
+                <div class="cont">
+                    <span class="code-to">验证码将发至(<em>152****6108</em>)</span>
+                    <div class="phone-verify">
+
+                    </div>
+                    <!--<div class="send-code">验证码：<input type="text" name="" class="code-ipt" placeholder="请输入手机验证码">
+                        <a href="javascript:;" class="get-code target">获取验证码</a><span class="correct-code">正确</span></div>
+                    <p class="code-alert">请输入正确的验证码</p>-->
+                </div>
+            </div>
+            <div class="step">
+                <h3 class="step-tit">第二步：人脸识别</h3>
+                <div class="qr-scan disshow">
+                    <div class="img-box">
+                        <span class="qr-msg">请用微信扫描下方二维码</span>
+                        <img src="img/qrcode-verify.jpg">
+                    </div>
+                    <!--  11.27   -->
+                    <div class="qr-error">
+                        <img src="img/not-found.png">
+                        <p>您的错误次数过多，本次交易即将关闭，请重新发起。如有困难请拨打<em>95522</em>获取支持</p>
+                    </div>
+                    <div class="qr-success">
+                        <img src="img/reset-notice.png">
+                        <p>申请已经提交成功</p>
+                    </div>
+                </div>
+            </div>
+            <div class="fun-box clearfix">
+                <a href="#/investment/plan-investment" class="back-btn fl">返回上一步</a>
+                <!--人脸识别验证通过之后返回列表页面-->
+                <a href="javascript:;" class="back-btn_2 fl disshow">返回上一步</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/investment/delete-investment.js"></script>
+<script src="lib/Taikang/phone-verify.js"></script>
+<script type="text/javascript">
+    $('.phone-verify').phoneVerify({
+        policyNumber: 1,
+        secene: 1,
+        interval: 60,
+        serviceUrl: "http://127.0.0.1:8080/udp-web",
+        success: function () {
+            alert("验证成功");
+            //......后续操作
+        },
+        error: function () {
+            alert('验证失败！');
+        }
+    });
+</script>
+<script src="lib/Taikang/common-auth.js"></script>

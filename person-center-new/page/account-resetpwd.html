@@ -1,0 +1,72 @@
+﻿<div class="account-reset">
+	<h3 class="tit"><i class="col-line"></i>密码修改</h3>
+	<div class="content">
+		<div class="pwd">
+			<div class="new-pwd">
+				新密码：
+				<!--为了破坏用户选择记住用户名\密码的结构-->
+				<input type="text" name="logphone" class="disshow" disabled autocomplete="off" />
+				<input type="password" name="logPassword" class="disshow" disabled autocomplete="off" />
+				<input type="password" name="" class="new-ipt ipt" placeholder="请输入新密码" autocomplete="off" /><span class="alert"></span>
+				<div class="notice">请填写6-20位字母加数字密码（字母区分大小写）</div>
+			</div>
+			<div class="repeat-pwd">
+				确认密码：<input type="password" name="" placeholder="请再次输入新密码" class="repeat-ipt ipt" autocomplete="off"><span class="alert"></span>
+			</div>
+			<a href="javascript:;" class="confirm-reset-btn">确认修改</a>
+		</div>
+	</div>
+</div>
+
+<!-- 身份验证成功 -->
+<div class="sucessTip">
+	<img src="img/reset-notice.png">
+	<h3>密码修改成功</h3>
+</div>
+<!-- 错误信息提示弹窗 -->
+<div class="pop-up">
+	<div class="opa"></div>
+	<div class="txt-box">
+		<div class="icon">
+			<img src="img/not-found.png" alt="">
+		</div>
+		<p class="txt">这里是一些错误信息！</p>
+		<a href="javascript:;" class="enter-btn">确定</a>
+	</div>
+</div>
+
+<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+<script type="text/javascript">
+	// $('.account-reset .content .pwd .repeat-ipt').on('focus',function(){
+	// 	var reg = /^[A-Za-z0-9]{6,20}$/;
+	//页面的选中状态
+	checkPwd('.new-ipt', '.repeat-ipt');
+	checkRePwd('.new-ipt', '.repeat-ipt');
+	$(".confirm-reset-btn").on("click", function() {
+		toCheckPwd('.new-ipt');
+		toCheckRePwd('.new-ipt', '.repeat-ipt');
+		debugger;
+		var able = 0,
+			arr = $('.pwd input:visible');
+		for(var i = 0; i < arr.length; i++) {
+			if($(arr[i]).val() !== "" && $(arr[i]).val() !== $(arr[i]).attr('placeholder')) {
+				able++;
+			}
+		}
+
+		if(able != arr.length || $('.pwd span').hasClass('alert wrong'))
+			return;
+
+		//----add by yulianlian on 2017/11/25-----
+		//修改密码成功之后界面的处理
+		$(".account-reset").hide();
+		$(".sucessTip").show();
+		//---add by yulianlian on 2017/11/25 end---
+		//继续操作
+	})
+	// 错误信息弹窗关闭
+	$('.pop-up .enter-btn').click(function() {
+		$(this).parent().parent().hide();
+		window.location.reload();
+	})
+</script>

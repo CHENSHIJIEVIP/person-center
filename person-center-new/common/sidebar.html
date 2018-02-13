@@ -1,0 +1,62 @@
+<li class="sidebar-children sidebar-children1 clearfix">
+    <div class="portrait fl">
+        <img src="img/pic01.png" alt="">
+    </div>
+    <div class="infor fl verified">
+        <p class="txt"><span class="u-name">张三</span> ，您好！</p>
+        <p class="vip"><i class="icon"></i>黄金用户</p>
+    </div>
+    <div class="infor fl verify">
+        <p class="txt"><span class="u-name">尊敬的用户</span> ，您好！</p>
+        <a href="#/account-verify" class="unverify">点击进行身份认证</a>
+    </div>
+</li>
+<li class="sidebar-children sidebar-children2">
+    <a href="#/baodan" class="item-links">
+        <p class="txt"><i class="icon"></i>我的保单</p>
+    </a>
+</li>
+<li class="sidebar-children sidebar-children3">
+    <a href="#/summary" class="item-links">
+        <p class="txt"><i class="icon"></i>我的投资</p>
+    </a>
+</li>
+<li class="sidebar-children sidebar-children4">
+    <a href="#/wangdian" class="item-links wangdian-click">
+        <p class="txt"><i class="icon"></i>服务网点</p>
+    </a>
+</li>
+<li class="sidebar-children sidebar-children5 disshow">
+    <a href="#/service" class="item-links">
+        <p class="txt"><i class="icon"></i>尊享服务</p>
+    </a>
+</li>
+<li class="sidebar-children sidebar-children6">
+    <a href="#/account-verify" class="item-links">
+        <p class="txt"><i class="icon"></i>账号管理<i class="fold"></i></p>
+    </a>
+    <ul class="sub-side">
+        <li><a href="#/account-verify" class="sub-side-1"><i class="menu-size icon"></i>身份验证</a></li>
+        <li><a href="#/account-resetpwd" class="sub-side-2"><i class="menu-size icon"></i>密码修改</a></li>
+        <li><a href="#/personal-tax" class="sub-side-3"><i class="menu-size icon"></i>纳税声明</a></li>
+    </ul>
+</li>
+<script type="text/javascript">
+   /* $('.sidebar .sidebar-children .item-links').on('click',function(){
+        $(this).parent().addClass('on').siblings('.sidebar-children').removeClass('on');
+        $(this).siblings('.sub-side').children('li').removeClass('on').eq(0).addClass('on');
+    });*/
+    $('.sub-side a').on('click',function(){
+        $(this).parent().addClass('on').siblings('li').removeClass('on');
+    });
+    
+    $('.sidebar .sidebar-children .wangdian-click').on('click',function(){
+        window.open('http://www.taikanglife.com/service/searchservice/newlifeground/tk_comSeacher.html','_blank');
+    });
+    
+    //认证状态切换
+    //显示已认证，隐藏未认证部分，页面默认显示未认证
+    //$('.sidebar-children1 .verify').css('display','block');
+    //$('.sidebar-children1 .verified').css('display',none);
+</script>
+

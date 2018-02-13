@@ -1,0 +1,270 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>泰康·重置密码</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<link rel="stylesheet" type="text/css" href="css/verify.css">
+		<script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+		<script type="text/javascript" src="lib/verify.min.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="lr-center clearfix">
+				<h1 class="logo-tit">
+                <a href="javascript:;" title="泰康人寿">泰康人寿</a>  
+            </h1>
+				<h2>重置密码</h2>
+			</div>
+		</div>
+		<!--输入登录名-->
+		<div  id="step1" class="reg-center">
+			<div class="step-bk">
+				<div class="step log-name active">
+					输入登录名
+				</div>
+				<i class="connect processing"></i>
+				<div class="step id-verify">
+					身份验证
+				</div>
+				<i class="connect processed"></i>
+				<div class="step rst-pwd">
+					重置密码
+				</div>
+			</div>
+			<div class="register">
+				<div class="reset-log-name">
+					登录名：<input type="text" name="" class="phone-ipt ipt" placeholder="手机号"><span class="alert"></span>
+				</div>
+				<!-- <div class="notice">如您是泰康客户，请填写留在泰康的手机号</div> -->
+				<div class="reg-verify">验证码：
+					<div class="verifier" id="verifier"></div>
+				</div>
+				<!-- <div class="reg-code">
+                短信验证码：<input type="text" name="" class="code-ipt ipt" placeholder=""><a href="javascript:;" class="send-code">点击获取验证码</a><span class="alert"></span>
+            </div> -->
+				<a href="javascript:;" class="next-step disabled">下一步</a>
+			</div>
+		</div>
+		<!--身份验证-->
+		<div id="step2" class="reg-center hidden">
+			<div class="step-bk">
+				<div class="step log-name active">
+					输入登录名
+				</div>
+				<i class="connect processed"></i>
+				<div class="step id-verify active">
+					身份验证
+				</div>
+				<i class="connect processing"></i>
+				<div class="step rst-pwd">
+					重置密码
+				</div>
+			</div>
+			<div class="register">
+				 <h3 class="reset-log-titl">通过手机号找回：</h3>
+				<div class="reset-log-phone">
+					已绑定手机号码：<span>150****1234</span>
+					<!--<a href="javascript:;" class="not-my-phone">不是我的手机号</a>-->
+				</div>
+				<div class="reg-code">
+					短信验证码：<input type="text" name="" class="code-ipt ipt" placeholder="输入短信验证码"><input type="text" class="hidden"/>
+					<a href="javascript:;" class="send-code">获取短信验证码</a><span class="alert"></span>
+				</div>
+				<a href="javascript:;" class="next-step disabled">下一步</a>
+			</div>
+			<div class="not-found">
+				<p>系统未能找到您预留的其他手机号码，如您想继续找回密码，<br>请您拨打客户服务专线<em>95522</em>咨询</p>
+			</div>
+		</div>
+		<!--重置密码-->
+		<div  id="step3" class="reg-center hidden">
+			<div class="step-bk">
+				<div class="step log-name active">
+					输入登录名
+				</div>
+				<i class="connect processed"></i>
+				<div class="step id-verify active">
+					身份验证
+				</div>
+				<i class="connect processed"></i>
+				<div class="step rst-pwd active">
+					重置密码
+				</div>
+			</div>
+			<div class="register">
+				<div class="new-pwd">
+					<!--为了破坏用户选择记住用户名\密码的结构-->
+				    <input type="text" name="logphone" class="disshow" disabled autocomplete="off" />
+				    <input type="password" name="logPassword" class="disshow" disabled autocomplete="off" />
+					密码：<input type="hidden" class="hidden"/><input type="password" name="" class="new-ipt ipt" placeholder="请输入新密码"><span class="alert"></span>
+					<div class="notice">请填写6-20位字母加数字密码（字母区分大小写）</div>
+				</div>
+				<div class="repeat-pwd">
+					确认密码：<input type="password" name="" placeholder="请再次输入密码" class="repeat-ipt ipt"><span class="alert"></span>
+				</div>
+				<a href="javascript:;" class="next-step disabled">下一步</a>
+			</div>
+		</div>
+		<!--密码重置成功-->
+		<div  id="step4"class="reg-center hidden">
+			<div class="step-bk">
+				<div class="step log-name active">
+					输入登录名
+				</div>
+				<i class="connect processed"></i>
+				<div class="step id-verify active">
+					身份验证
+				</div>
+				<i class="connect processed"></i>
+				<div class="step rst-pwd end">
+					重置密码
+				</div>
+			</div>
+			<div class="end-step">
+				<h3>新密码设置成功！</h3>
+				<h4>请牢记您的新密码！</h4>
+				<h5 class="counting"><em>10</em>秒后将进入用户首页</h5>
+			</div>
+		</div>
+		<div class="footer"></div>
+		<!-- 错误信息提示弹窗 -->
+		<div class="pop-up">
+	        <div class="opa"></div>
+	        <div class="txt-box">
+	            <div class="icon">
+	                <img src="img/not-found.png" alt="">
+	            </div>
+	            <p class="txt">这里是一些错误信息！</p>
+	            <a href="javascript:;" class="enter-btn">返回</a>
+	        </div>
+	    </div>
+	    <!-- 密码超限提示框 -->
+	    <div class="reg-login-errorpassword-position login-error-password disshow">
+	    	<img src="img/a-forbid.png"/>
+	    	<p>已输入5次错误密码！</p>
+	    	<p>账户已锁定，次日自动解锁。</p>
+	    </div>
+	</body>
+	<script type="text/javascript">
+		var isSlider=false;
+		//add by yulianlian on 2017/11/25 加载页脚文件
+		$.get("common/footer.html", function(data) {
+			$(".footer").html(data);
+		});
+		
+		$('.verifier').slideVerify({
+			type: 2, //类型
+			vOffset: 5, //误差量，根据需求自行调整
+			vSpace: 5, //间隔
+			/*imgName: ['1.jpg', '2.jpg'],*/
+			imgSize: {
+				width: '323px',
+				height: '200px',
+			},
+			blockSize: {
+				width: '40px',
+				height: '40px',
+			},
+			barSize: {
+				width: '323px',
+				height: '40px',
+			},
+			ready: function() {},
+			success: function() {
+				//alert('验证成功，添加你自己的代码！');
+				//滑块验证码是否通过
+				isSlider=true;
+			},
+			error: function() {
+				alert('验证失败！');
+			}
+
+		});
+		
+		checkPhone('.phone-ipt');
+		setCounting(60,'.send-code');
+	    checkPwd('.new-ipt','.repeat-ipt');
+	    checkRePwd('.new-ipt','.repeat-ipt');
+	    
+	    //11.25 先设一个验证码
+	    var  correctCode = '1235';
+	    checkValidCode('.code-ipt',correctCode);
+	    
+		$('.next-step').on('mouseenter', function(e) {
+			var obj= e.target || e.srcElement,
+			    step=obj.parentNode.parentNode.id;
+			    
+			//滑块验证码是否通过
+			if(!isSlider)
+			   return;
+		    if(step==="step3"){
+		    	toCheckPwd('.new-ipt');
+				toCheckRePwd('.new-ipt','.repeat-ipt');
+			}
+			nextStep('.next-step',step);
+		});
+		$('.next-step').on('click', function(e) {
+			//滑块验证码是否通过
+			if(!isSlider)
+			   return;
+			var obj= e.target || e.srcElement,
+			    step=obj.parentNode.parentNode.id;
+			nextStep('.next-step',step);
+			if($(this).hasClass('disabled')) {
+				e.preventDefault();
+			} else {
+				$('#'+step).addClass("hidden").next().removeClass("hidden")
+			}
+		});
+		
+		//手机号码变化时，检测手机格式是否正确
+		$('.phone-ipt').on('keyup',function(){
+			if(toCheckPhone(".phone-ipt") && isSlider){
+				$("#step1 .next-step").removeClass('disabled');
+			}
+			else{
+				$("#step1 .next-step").removeClass('disabled').addClass("disabled");
+			}
+		});
+		
+		//不是我的手机号进入的界面
+		$(".not-my-phone").on("click",function(){
+	        $('.register').hide();
+	        $('.not-found').show();
+		});
+		// 10s 后跳转到 用户首页 ./index.html,到第四步执行此方法
+        /*(function(){
+            var timer_10s,
+                timer_conuts = 10;
+            function toLocIndex(){
+                timer_conuts -= 1;
+                console.log(timer_conuts)
+                $('.counting em').html(timer_conuts);
+                if(timer_conuts <= 0){
+                    window.location.href="./index.html";
+                    return false;
+                }
+                
+                timer_10s = setTimeout(function(){
+                    toLocIndex();
+                },1000);
+            }
+            toLocIndex();
+       })()*/
+       // 错误信息弹窗关闭
+	    $('.pop-up .enter-btn').click(function(){
+	    	$(this).parent().parent().hide();
+	    	window.location .reload(); 
+	    })
+	</script>
+
+</html>

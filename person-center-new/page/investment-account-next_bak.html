@@ -1,0 +1,313 @@
+<!--2017/12/07 by zhanghuan-->
+<div class="tzzhlq_next">
+	<h3 class="tit"><i class="col-line"></i>投资账户领取</h3>
+	<div class="content">
+		<div class="notice">领取账户</div>
+		<table class="table1">
+			<thead>
+				<tr>
+					<th>领取账户</th>
+					<th>领取前单位数</th>
+					<th>领取后单位数</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>行业配置</td>
+					<td>1000</td>
+					<td>900</td>
+				</tr>
+				<tr>
+					<td>稳健收益</td>
+					<td>10000</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>货币规避</td>
+					<td>100</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="notice clearfix">
+			领取账号选择
+			<!--此处需要做判断，如果是网销，a标签显示p标签隐藏；如果是银保，a标签隐藏p标签显示-->
+			<a href="javascript:;" class="credit_manage fr">管理银行卡</a>
+			<p class="yinbao fr">该产品不支持在线变更银行卡，请您至当地泰康新生活广场办理。</p>
+		</div>
+		<table class="table2">
+			<thead>
+				<tr>
+					<th>领取方式</th>
+					<th>选择银行</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>银行转账</td>
+					<td colspan="2" class="bank_select">
+						<div class="analog-select">
+							<input class="inp inp-in" type="text" name="" value="招商银行（6214********1234）" readonly="true" placeholder="">
+							<i class="horned"></i>
+							<ul class="select-menu">
+								<li class="item">招商银行（6214********1234）</li>
+								<li class="item">中国银行（6214********1234）</li>
+								<li class="item">中国建设银行银行（6214********1234）</li>
+								<li class="item">中国农业银行银行（6214********1234）</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="account_choose">
+			<i class="account_agree"></i><span class="account_txt">我已阅读并同意《银行转账须知》</span>
+		</div>
+		<div class="fun-box clearfix">
+			<a href="javascript:;" class="next-btn fl disabled">下一步</a>
+			<a href="#/investment-account-detail" class="back-btn fl">返回上一步</a>
+		</div>
+	</div>
+	<!--遮层及弹框-->
+	<div class="pop-up">
+		<div class="opa"></div>
+		<div class="txt-box">
+			<div class="credit_top">银行卡管理</div>
+			<div class="credit_content">
+				<div class="credit_content_table">
+					<table class="table1">
+						<thead>
+							<tr>
+								<th>新增银行卡</th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>持卡人</td>
+								<td colspan="2" class="credit_detail">张三</td>
+							</tr>
+							<tr>
+								<td>开户行</td>
+								<td colspan="2" class="credit_detail">
+									<div class="analog-select">
+										<input class="inp inp-in" type="text" name="" value="选择开户行" readonly="true" placeholder="选择开户行">
+										<i class="horned"></i>
+										<ul class="select-menu">
+											<li class="item">招商银行</li>
+											<li class="item">中国银行</li>
+											<li class="item">中国建设银行银行</li>
+											<li class="item">中国农业银行银行</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>卡号</td>
+								<td colspan="2" class="credit_detail">
+									<input type="text" placeholder="请输入银行卡号" value="请输入银行卡号" onFocus="if (value =='请输入银行卡号'){value =''}" onBlur="if (value ==''){value='请输入银行卡号';}"/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="notice">已有银行卡</div>
+					<div class="thead_content">
+						<table class="table2">
+							<thead>
+								<tr>
+									<th></th>
+									<th>银行名称</th>
+									<th>银行账号</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+					<div class="table2_content">
+						<table class="table2">
+							<tbody>
+								<tr>
+									<td>
+										<i class="table_choose"></i>
+									</td>
+									<td>招商银行</td>
+									<td>6214********1234</td>
+									<td>
+										<span class="table_operation"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="table_choose"></i>
+									</td>
+									<td>建设银行</td>
+									<td>5123********1234</td>
+									<td>
+										<span class="table_operation"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="table_choose"></i>
+									</td>
+									<td>工商银行</td>
+									<td>6221********1234</td>
+									<td>
+										<span class="table_operation"></span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="table_choose"></i>
+									</td>
+									<td>工商银行</td>
+									<td>6221********1234</td>
+									<td>
+										<span class="table_operation"></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="credit_bottom">
+				<a href="javascript:;" class="credit_sure">确定</a>
+			</div>
+		</div>
+	</div>
+	<!--确认是否删除的弹框-->
+	<div class="pop-up-convert">
+		<div class="opa"></div>
+		<div class="txt-box">
+			<div class="icon">
+				<img src="img/a-attention.png" alt="">
+				<span>确认删除此银行卡？</span>
+			</div>
+			<div class="btn-box">
+				<a href="javascript:;" class="cal-btn">取消</a>
+				<a href="javascript:;" class="enter-btn">确认</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	//checkbox选中
+	$(document).on('click', '.tzzhlq_next .account_choose', function() {
+		if($('.account_choose i').hasClass('account_selected')) {
+			$('.account_choose i').removeClass('account_selected');
+			$('.tzzhlq_next .fun-box .next-btn').addClass('disabled');
+		} else {
+			$('.account_choose i').addClass('account_selected');
+			$('.tzzhlq_next .fun-box .next-btn').removeClass('disabled');
+		};
+	});
+	//选择银行下拉框
+	$(document).on("click", function() {
+		$(".bank_select .analog-select .select-menu").slideUp();
+	});
+	$(document).off('click', ".bank_select .analog-select .inp").on("click", ".bank_select .analog-select .inp", function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$(".bank_select .analog-select").removeClass("focus");
+		$(".bank_select .analog-select .select-menu").stop().slideUp();
+		$(this).siblings('.select-menu').stop().slideToggle(300);
+		$(this).closest(".analog-select").addClass("focus");
+		return false;
+	});
+	$(document).on('click', '.bank_select .analog-select .item', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var str = $(this).text();
+		$(this).closest('.analog-select').find('.inp').val(str);
+		$(this).closest('.analog-select').find('.select-menu').stop().slideUp(300);
+		return false;
+	});
+	//管理银行卡--出弹框
+	$(document).on('click', '.tzzhlq_next .credit_manage', function() {
+		$('.tzzhlq_next .pop-up').css('display', 'block');
+		//管理银行卡弹框处--超过固定高度出滚动条
+		if($('.table2_content .table2 tbody').height() > 103) {
+			$('.table2_content').css('overflow-y', 'auto');
+			$('.thead_content .table2 th:nth-child(4)').css('padding-right', '5%');
+		}
+	});
+	//弹框---选择银行名称
+	$(document).on('click', '.tzzhlq_next .pop-up .table2 tr .table_choose', function() {
+		if($(this).hasClass('table_selected')) {
+			$(this).removeClass('table_selected');
+		} else {
+			$(this).addClass('table_selected');
+		};
+	});
+	//弹框---选择开户行下拉框
+	$(document).on("click", function() {
+		$(".credit_detail .analog-select .select-menu").slideUp();
+	});
+	$(document).off('click', ".credit_detail .analog-select .inp").on("click", ".credit_detail .analog-select .inp", function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		$(".credit_detail .analog-select").removeClass("focus");
+		$(".credit_detail .analog-select .select-menu").stop().slideUp();
+		$(this).siblings('.select-menu').stop().slideToggle(300);
+		$(this).closest(".analog-select").addClass("focus");
+		return false;
+	});
+	$(document).on('click', '.credit_detail .analog-select .item', function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		var str = $(this).text();
+		$(this).closest('.analog-select').find('.inp').val(str);
+		$(this).closest('.analog-select').find('.select-menu').stop().slideUp(300);
+		return false;
+	});
+	//点击操作删除符号，删除当前行
+	$(document).on('click', '.table2_content .table_operation', function() {
+		var $self = $(this);
+		$('.tzzhlq_next .pop-up-convert').css('display', 'block');
+		enterBtn('.tzzhlq_next .pop-up-convert .enter-btn',$self);
+		cancelBtn('.tzzhlq_next .pop-up-convert .cal-btn');
+		//管理银行卡弹框处--滚动条消失，padding-right变为0
+		if($('.table2_content .table2 tbody').height() <= 103) {
+			$('.thead_content .table2 th:nth-child(4)').css('padding-right', '0%');
+		}
+	});
+	//管理银行卡弹框，点击确定，弹框隐藏
+	$(document).on('click', '.credit_sure', function() {
+		$('.tzzhlq_next .pop-up').css('display', 'none');
+		//进行之后的操作
+	});
+	
+	//点击确定，删除当前行
+	function enterBtn(className,orignal) {
+		$(className).on('click', function() {
+			$('.tzzhlq_next .pop-up-convert').css('display', 'none');
+			orignal.parent().parent().remove();
+		});
+	}
+	//点击取消，确认框隐藏
+	function cancelBtn(className) {
+		$(className).on('click', function() {
+			$('.tzzhlq_next .pop-up-convert').css('display', 'none');
+		});
+	}
+	//解决nth-child() 在IE8不兼容的问题
+	$(document).ready(function() {
+		$('.tzzhlq_next .content table tr:nth-child(even)').css('background','#f7f7f7');
+		$('.tzzhlq_next .credit_content_table .table1 tbody td:nth-child(1)').css('background', '#f7f7f7');
+		$('.tzzhlq_next .credit_content_table .table1 thead th:nth-child(1)').css('width', '40%');
+		$('.tzzhlq_next .credit_content_table .table1 thead th:nth-child(2)').css('width', '30%');
+		$('.tzzhlq_next .credit_content_table .table1 thead th:nth-child(3)').css('width', '35%');
+		$('.tzzhlq_next .credit_content_table .table2 thead th:nth-child(1)').css('width', '10%');
+		$('.tzzhlq_next .credit_content_table .table2 thead th:nth-child(2)').css('width', '30%');
+		$('.tzzhlq_next .credit_content_table .table2 thead th:nth-child(3)').css('width', '40%');
+		$('.tzzhlq_next .credit_content_table .table2 thead th:nth-child(4)').css('width', '20%');
+		$('.tzzhlq_next .credit_content_table .table2 tbody td:nth-child(1)').css('width', '10%');
+		$('.tzzhlq_next .credit_content_table .table2 tbody td:nth-child(2)').css('width', '30%');
+		$('.tzzhlq_next .credit_content_table .table2 tbody td:nth-child(3)').css('width', '40%');
+		$('.tzzhlq_next .credit_content_table .table2 tbody td:nth-child(4)').css('width', '20%');
+
+	})
+</script>

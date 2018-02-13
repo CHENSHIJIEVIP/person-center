@@ -1,0 +1,132 @@
+<!--新设定投计划页面  add by chenshijie on 2018/01/16-->
+<div class="wrap_common invest-new">
+	<h3 class="tit"><i class="col-line"></i>投资账户定期投资</h3>
+	<div class="content">
+		<div class="new-setup">
+			<div class="invest-modify-header">新设定投计划</div>
+			<ul class="policy-infor clearfix">
+				<li class="fl">产品名称：泰康e理财B款投资连结保险</li>
+				<li class="fl">保单号：210123456789</li>
+				<li class="fl">银行名称：招商银行</li>
+				<li class="fl">银行账号：6214********1234</li>
+				<li class="fl">划款周期：月</li>
+				<li class="fl">约定划款日：
+					<div class="analog-select modify-select" style="display: inline-block;margin-left: 0;float: none;">
+						<input class="inp inp-in modify-inp" type="text" name="" value="请选择约定划款日" readonly="true" placeholder="请选择约定划款日">
+						<i class="horned"></i>
+						<!--ul追加到这里-->
+					</div>
+				</li>
+			</ul>
+			<table class="table1 table-new">
+			<thead>
+				<tr>
+					<th>账户名称</th>
+					<th>账户金额（元）</th>
+					<th>定投金额（元）</th>
+					<th>合计定投金额（元）</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>行业配置</td>
+					<td>1000.00</td>
+					<td><input type="text" name="inverstment_out" class="inverstment_out investment-new" placeholder="请输入定投金额" value="请输入定投金额" /></td>
+					<td rowspan="2" class="modify-combine addtional-combine">-</td>
+				</tr>
+				<tr>
+					<td>货币规避</td>
+					<td>500,000.00</td>
+					<td><input type="text" name="inverstment_out" class="inverstment_out investment-new" placeholder="请输入定投金额" value="请输入定投金额" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="fun-box fun-box-two clearfix">
+			<a href="javascript:;" class="next-btn fl">下一步</a>
+			<a href="#/investment/plan-investment" class="back-btn fl">返回上一步</a>
+		</div>
+		</div>
+	</div>
+</div>
+<!--人脸识别页面  add by chenshijie on 2018/01/16-->
+<div class="wrap_common invest-modify-face disshow">
+	<h3 class="tit"><i class="col-line"></i>投资账户定期投资</h3>
+	<div class="content">
+		<div class="modify-info clearfix">
+			<h3 class="modify-face-header">您将进行以下定期投资：<span class="modify-confirm-info">（请确认信息无误）</span></h3>
+			<div class="modify-list-all modify-money-all fl">
+				<i class="money-tip"><span>每月28日</span></i>
+				<div class="money-account">
+					<p class="money-list-num">合计定投金额</p>
+					<p class="money-list-all">￥10,000.00</p>
+				</div>
+			</div>
+			<div class="money-down fr">
+				<i class="money-down-icon"></i>
+			</div>
+			<!--定期投资展示  追加在这里-->
+		</div>
+		<div class="modify-card">
+			<h3 class="modify-face-header modify-bank-card">缴费银行卡：</h3>
+			<div class="modify-bank">
+				<div class="modify-bank-content">
+					<p class="modify-bank-name">建设银行储蓄卡 · 张三</p>
+					<p class="modify-bank-num">6222 7777 8888 9999 678</p>
+				</div>
+				<i class="modify-card-correct fr"></i>
+			</div>
+		</div>
+		<h3>
+			<i class="safety"></i>
+			<span class="sub-msg">请完成以下两步验证，以保护您的客户权益</span>
+		</h3>
+		<div class="step">
+			<h3 class="step-tit instep">第一步：手机验证</h3>
+			<div class="cont">
+				<span class="code-to">验证码将发至(<em>152****6108</em>)</span>
+				<div class="phone-verify">
+
+				</div>
+				<!--<div class="send-code">验证码：<input type="text" name="" class="code-ipt" placeholder="请输入手机验证码">
+					<a href="javascript:;" class="get-code target">获取验证码</a><span class="correct-code">正确</span></div>
+				<p class="code-alert">请输入正确的验证码</p>-->
+			</div>
+		</div>
+		<div class="step">
+			<h3 class="step-tit">第二步：人脸识别</h3>
+			<div class="qr-scan disshow">
+				<div class="img-box">
+					<span class="qr-msg">请用微信扫描下方二维码</span>
+					<img src="img/qrcode-verify.jpg">
+				</div>
+				<!--  11.27   -->
+				<div class="qr-error">
+					<img src="img/not-found.png">
+					<p>您的错误次数过多，本次交易即将关闭，请重新发起。如有困难请拨打<em>95522</em>获取支持</p>
+				</div>
+				<div class="qr-success">
+					<img src="img/reset-notice.png">
+					<p>申请已经提交成功</p>
+				</div>
+			</div>
+		</div>
+		<div class="fun-box clearfix">
+			<a href="javascript:;" class="back-btn fl">返回上一步</a>
+			<!--人脸识别验证通过之后返回列表页面-->
+			<a href="#/tlconvert" class="back-btn_2 fl disshow">返回上一步</a>
+		</div>
+	</div>
+</div>
+<!--遮层及弹框-->
+<div class="pop-up">
+	<div class="opa"></div>
+	<div class="txt-box">
+		<div class="icon">
+			<img src="img/not-found.png" alt="">
+		</div>
+		<p class="txt">请输入正确的定投金额</p>
+		<a href="javascript:;" class="enter-btn">确定</a>
+	</div>
+</div>
+<script src="lib/taikang/phone-verify.js"></script>
+<script type="text/javascript" src="js/investment/new-investment.js"></script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旋转测试</title>
+		<script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src='lib/jquery.rotate.min.js'></script>
+		<style>
+			.img-animate {
+				animation: myfirst .5s;
+				-moz-animation: myfirst .5s;
+				-webkit-animation:myfirst .5s; /* Safari and Chrome */
+			}
+			
+			@keyframes myfirst
+			{
+				from {
+					transform: rotate(0deg);
+					-ms-transform: rotate(0deg);
+					-moz-transform: rotate(0deg);
+					-webkit-transform:  rotate(0deg);;
+				}
+                to {
+                	transform: rotate(180deg);
+					-ms-transform: rotate(180deg);
+					-moz-transform: rotate(180deg);
+					-webkit-transform:  rotate(180deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<img id="img7" src="img/a-freshen.png" width="54" height="54" />
+		<script>
+			$(document).ready(function() {
+				var value2 = 0;
+				$("#img7").rotate({
+					bind:
+					{
+						click: function() {
+							value2 += 180;
+							$(this).rotate({
+								animateTo: value2
+							})
+						}
+					}
+				});
+				/*$("#img7").on("click",function(){
+					$(this).removeClass("img-animate").addClass("img-animate");
+				})*/
+			});		
+		</script>
+	</body>
+</html>

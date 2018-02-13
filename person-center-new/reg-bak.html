@@ -1,0 +1,308 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>泰康·快速注册</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" type="text/css" href="css/verify.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+		<script type="text/javascript" src="lib/verify.min.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="lr-center clearfix">
+				<h1 class="logo-tit">
+                <a href="javascript:;" title="泰康人寿">泰康人寿</a>
+                
+            </h1>
+				<h2>快速注册</h2>
+			</div>
+		</div>
+		<div id="step1" class="reg-center">
+			<div class="step-bk">
+				<div class="step phone active">
+					手机号验证
+				</div>
+				<i class="connect processing"></i>
+				<div class="step pwd">
+					设置密码
+				</div>
+				<i class="connect"></i>
+				<div class="step finish">
+					完成
+				</div>
+			</div>
+			<div class="register">
+				<div class="reg-phone">
+					手机号码：<input type="text" name="" class="phone-ipt ipt" placeholder="请输入您的手机号码"><span class="alert"></span>
+				</div>
+				<div class="notice">如您是泰康客户，请填写留在泰康的手机号</div>
+				<div class="reg-verify">验证码：
+					<div class="verifier" id="verifier"></div>
+				</div>
+				<div class="reg-code">
+					短信验证码：<input type="text" name="" class="code-ipt ipt" placeholder="" disabled="disabled">
+					<a href="javascript:;" class="send-code disabled">获取验证码</a><span class="alert"></span>
+				</div>
+				<a href="javascript:void(0);" class="next-step disabled">下一步</a>
+			</div>
+			<span class="already">已有账号，点此<a href="login.html">登录</a></span>
+		</div>
+		<div id="step2" class="reg-center hidden">
+			<div class="step-bk">
+				<div class="step phone active">
+					手机号验证
+				</div>
+				<i class="connect processed"></i>
+				<div class="step pwd active">
+					设置密码
+				</div>
+				<i class="connect processing"></i>
+				<div class="step finish">
+					完成
+				</div>
+			</div>
+			<div class="register">
+				<div class="new-pwd">
+					密码：<input type="password" name="" class="new-ipt ipt" ><span class="alert"></span>
+					<div class="notice">请填写6-20位字母加数字密码（字母区分大小写）</div>
+				</div>
+				<div class="repeat-pwd">
+					确认密码：<input type="password" name="" class="repeat-ipt ipt"><span class="alert"></span>
+				</div>
+				<a href="javascript:void(0);" class="next-step disabled">下一步</a>
+			</div>
+			<span class="already">已有账号，点此<a href="./login.html">登陆</a></span>
+		</div>
+		<div id="step3" class="reg-center hidden">
+			<div class="step-bk">
+				<div class="step phone active">
+					手机号验证
+				</div>
+				<i class="connect processed"></i>
+				<div class="step pwd active">
+					设置密码
+				</div>
+				<i class="connect processed"></i>
+				<div class="step finish active">
+					完成
+				</div>
+			</div>
+			<div class="end-step">
+				<h3>注册成功！</h3>
+				<h4>150****6092 欢迎你使用泰康人寿官网！</h4>
+				<a href="./index.html" class="reg-end-btn">用户中心</a>
+				<h4>进入用户中心，开启在线服务</h4>
+			</div>
+		</div>
+		<div class="footer">
+			
+		</div>
+		<div class="reg-agreement">
+			<div class="reg-agreementbg"></div>
+			<div class="reg-agreement-container">
+				<a href="./login.html" class="reg-agreement-clos"></a>
+				<div class="reg-agreement-title">
+					<h2>用户注册协议和隐私政策</h2>
+				</div>
+				<div class="reg-agreement-content">
+					<!--<div class="reg-agreement-text">
+						<p><b>亲爱的用户，在您注册为泰康用户的过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意，由其是加粗字体。</b></p>
+						<div class="server-agreement">
+							<h3><a href="#" target="_blank">服务协议</a></h3>
+							<ul class="reg-items">
+								<li>1.总则 </li>
+								<li>10.有限责任</li>
+								<li>2.服务简介</li>
+								<li>11.泰康网络会员服务信息的存储及限制</li>
+								<li>3.服务条款的修改 </li>
+								<li>12.用户管理</li>
+								<li>4.服务变更、中断、终止</li>
+								<li>13.保障</li>
+								<li>5.使用规则</li>
+								<li>14.结束服务</li>
+								<li>6.版权声明</li>
+								<li>15.通告</li>
+								<li>7.用户隐私制度</li>
+								<li>16.参与广告策划</li>
+								<li>8.用户的账号、密码和安全性</li>
+								<li>17.邮件内容的所有权</li>
+								<li>9.拒绝提供担保</li>
+								<li>18.法律</li>
+							</ul>
+						</div>
+						<div class="server-agreement">
+							<h3><a href="#" target="_blank">隐私协议</a></h3>
+							<ul class="reg-items">
+								<li>1.隐私政策的确认和接纳</li>
+								<li>9.信息安全事件处置</li>
+								<li>2.信息收集</li>
+								<li>10.未成年人信息保护</li>
+								<li>3.信息使用</li>
+								<li>11.用户个人信息管理</li>
+								<li>4.信息共享、转让和披露</li>
+								<li>12.从中国大陆地区以外访问我们的网站</li>
+								<li>5.信息保存及跨境传输</li>
+								<li>13.隐私政策的适用范围</li>
+								<li>6.Cookie的使用</li>
+								<li>14.隐私政策的修改</li>
+								<li>7.个人敏感信息提示</li>
+								<li>15.法律 </li>
+								<li>8.信息安全与保护</li>
+							</ul>
+						</div>
+						<p class="reg-agreement-text-p">【审慎阅读】您在申请注册流程中点击同意前，请您务必审慎阅读、充分理解协议中相关条款内容，尤其是与您约定免除或限制责任的条款，以及字体加粗标识的重要条款。</p>
+						<p class="reg-agreement-text-p"><b>【请您注意】如果您不同意上述协议或其中任何条款约定，请您停止注册。如果您按照注册流程提示填写信息、阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容。</b>如果您对以上内容有疑问，请联系：
+							<a href="mailto:@.com;">XXX@XXX.com</a>。</p>
+						<p class="reg-agreement-text-p">点击同意即代表您已阅读并同意泰康《服务协议》和《隐私政策》，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方。</p>
+					</div>-->
+				    <div class="user-agreement">
+						<h3>客户信息使用授权声明条款（示例）</h3>
+						<p class="reg-agreement-text-p">本人授权泰康集团，基于提供更优质服务和产品的目的，将本人提供给泰康集团的个人信息、本人享受泰康集团服务产生的信息（包含本单证签署之前提供和产生的信息）以及泰康集团根据本条款约定查询、收集的信息，向泰康集团各公司、合作机构披露，用于为本人提供服务、产品推介、开展市场调查与信息数据分析等。</p>
+						<p class="reg-agreement-text-p">本人承诺向泰康集团提供的个人相关信息的真实性和准确性，授权泰康集团向合作机构对本人的个人信息真实性和准确性进行核验，并承担因个人提供信息不真实、不准确造成的一切责任。</p>
+						<p class="reg-agreement-text-p">泰康集团及其合作机构对本人个人相关信息负有保密义务，应采取必要措施保证信息安全。</p>			
+						<p class="reg-agreement-text-p">本条款自本单证签署时生效，具有独立法律效力，不受合同成立与否及效力状态变化的影响。</p>
+						<p class="reg-agreement-text-p reg-agreement-text-p-last">注：“泰康集团”指泰康保险集团股份有限公司及其直接控股或间接控股的公司。</p>
+					</div>
+				</div>
+				<div class="reg-agreement-bot">
+					<a href="./login.html" class="no-agree">不同意</a>
+					<a href="javascript:;" class="to-agree">同意并继续</a>
+				</div>
+			</div>
+		</div>	
+		<!-- 错误信息提示弹窗 -->
+		<div class="pop-up">
+	        <div class="opa"></div>
+	        <div class="txt-box">
+	            <div class="icon">
+	                <img src="img/not-found.png" alt="">
+	            </div>
+	            <p class="txt">这里是一些错误信息！</p>
+	            <a href="javascript:;" class="enter-btn">返回</a>
+	        </div>
+	    </div>
+	</body>
+	<script type="text/javascript">
+		//加载页脚文件
+		$.get("common/footer.html", function(data) {
+			$(".footer").html(data);
+		});
+		var isSlider=false,
+		    isFirstMouseenter = true,
+		    isStep2FirstMouseenter=true;
+		//生成验证码控件
+		$('.verifier').slideVerify({
+			type: 2, //类型
+			vOffset: 5, //误差量，根据需求自行调整
+			vSpace: 5, //间隔
+			/*imgName: ['1.jpg', '2.jpg'],*/
+			imgSize: {
+				width: '323px',
+				height: '200px',
+			},
+			blockSize: {
+				width: '40px',
+				height: '40px',
+			},
+			barSize: {
+				width: '323px',
+				height: '40px',
+			},
+			ready: function() {},
+			success: function() {
+				alert('验证成功，添加你自己的代码！');
+				isSlider = true;
+				//11.27 滑块通过,需要手机号输入正确，才可以获取验证码
+				if(toCheckPhone(".reg-phone .phone-ipt")){
+					$(".reg-code .code-ipt").attr("disabled", false);
+					$(".reg-code a").removeClass("disabled");
+				}
+				//......后续操作
+			},
+			error: function() {
+				alert('验证失败！');
+			}
+		});
+
+		$('.next-step').on('mouseenter', function(e) {
+			var obj = e.target || e.srcElement,
+				step = obj.parentNode.parentNode.id;
+				
+			//第一次时不验证
+			if(isFirstMouseenter){
+				isFirstMouseenter=false;
+				return;
+			}	
+			if($("#"+step+" .phone-ipt").val()==""){
+				$("#"+step+" .phone-ipt").siblings('.alert').text('请输入手机号').removeClass('right').removeClass('wrong').addClass('wrong');
+			}
+			if($("#"+step+" .code-ipt").val()==""){
+				$("#"+step+" .code-ipt").siblings('.alert').text('请输入验证码').removeClass('right').removeClass('wrong').addClass('wrong');
+			}
+			if(step=="step2"){
+				if(isStep2FirstMouseenter){
+					isStep2FirstMouseenter=false;
+				} else {
+					toCheckPwd('.new-ipt');
+					toCheckRePwd('.new-ipt','.repeat-ipt');
+				}
+			}
+		    nextStep('.next-step', step);
+		});
+		$('.next-step').on('click', function(e) {
+			var obj = e.target || e.srcElement,
+				step = obj.parentNode.parentNode.id;
+				
+			var isContinue=nextStep('.next-step', step);
+			if(!isContinue || $(this).hasClass('disabled')){
+				e.preventDefault();
+				return;
+			}
+			
+			$('#' + step).addClass("hidden").next().removeClass("hidden")
+		});
+		
+		//手机号码变化时，检测手机格式是否正确
+		$('.reg-phone .phone-ipt').on('keyup',function(){
+			if(toCheckPhone(".reg-phone .phone-ipt") && isSlider){
+				$(".reg-code .code-ipt").attr("disabled", false);
+				$(".reg-code a").removeClass("disabled");
+			}
+			else{
+				initValidCodeIpt(".reg-code");
+				//clearInterval(InterValObj);
+			}
+		});
+		
+		//同意协议是隐藏
+        $('.to-agree').on('click',function(e){
+        	$('.reg-agreement').hide();
+        });
+        
+		//检测信息
+		checkPhone('.phone-ipt');
+		setCounting(60, '.send-code');
+		checkPwd('.new-ipt','.repeat-ipt');
+	    checkRePwd('.new-ipt','.repeat-ipt');
+	    
+        //11.25 先设一个验证码
+	    var  correctCode = '1235';
+	    checkValidCode('.code-ipt',correctCode);
+	    // 错误信息弹窗关闭
+	    $('.pop-up .enter-btn').click(function(){
+	    	$(this).parent().parent().hide();
+	    	window.location .reload(); 
+	    })
+		
+	</script>
+
+</html>

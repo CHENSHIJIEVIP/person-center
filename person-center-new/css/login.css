@@ -1,0 +1,998 @@
+﻿/*  初始化浏览器默认样式 开始：  */
+* {
+    padding:0px;
+    margin:0px;
+}
+body {
+    font-size:12px;
+    font-family: "PingFangSC-Regular","Microsoft Yahei";
+    min-width:1200px;
+    background:#f5f5f5;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+    font-size:100%;
+}
+input{font-family: "PingFangSC-Regular","Microsoft Yahei";}
+ul,ol {
+    list-style:none;
+}
+li {
+    list-style:none;
+}
+a {
+    text-decoration:none;
+}
+img,a img {
+    border:none;
+    vertical-align:top;
+}
+b,strong {
+    font-weight:normal;
+}
+i,em {
+    font-style:normal;
+}
+table {
+    border-collapse:collapse;
+}
+button,input,select,option{
+    outline: none;
+    border:none;
+    background:transparent;
+}
+.clearfix:after {
+    display:block;
+    content:'';
+    clear:both;
+}
+.clearfix {
+    zoom:1;
+}
+.fl {
+    float:left;
+}
+.fr {
+    float:right;
+}
+/*  初始化浏览器默认样式 结束。  */
+
+/*  头部及底部样式 开始：  */
+.lr-center {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.header {
+    background:#fff;
+}
+.header .top {
+    height:78px;
+    background:#666;
+}
+.header .notice {
+    position:relative;
+    padding:0 0 0 30px;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    font-size:14px;
+}
+.header .notice .icon {
+    width:12px;
+    height:12px;
+    background:url(../img/icon01.png) no-repeat;
+    position:absolute;
+    left:0;
+    top:50%;
+    margin:-6px 0 0 0;
+    cursor:pointer;
+}
+.header .user-box {
+    height:40px;
+    line-height:40px;
+    color:#fff;
+    font-size:14px;
+}
+.header .user-box a {
+    color:#fff;
+}
+.header .user-box a:hover {
+    color:#ff7e00;
+}
+.header .user-wel {
+    margin:0 40px 0 0;
+}
+.header .col-line {
+    margin:0 12px;
+}
+.header .logo-tit {
+    width:140px;
+    height:78px;
+    background:url(../img/logo.png) no-repeat center center;
+    line-height: 78px;
+    font-size: 26px;
+    display: inline-block;
+}
+.header .logo-tit a {
+    display:block;
+    text-indent:-99999em;
+    height:100%;
+}
+.footer .logo-tit {
+    width:140px;
+    height:117px;
+    position: absolute;
+    background:url(../img/logo_footer.png) no-repeat center center;
+    line-height: 117px;
+    margin-top: -44px;
+    font-size: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.footer .logo-tit a {
+    display:block;
+    text-indent:-99999em;
+    height:100%;
+}
+.lr-center h2 {
+    display:inline-block;
+    margin-left: 40px;
+    font-size: 26px;
+    line-height: 78px;
+}
+.nav {
+    padding:25px 0;
+}
+.nav-children {
+    font-size:14px;
+    height:30px;
+    text-align:center;
+    margin:0 50px 0 0;
+}
+.nav-children.none {
+    margin:0;
+}
+.disshow {
+    display: none;
+}
+.nav-children .nav-name {
+    display:block;
+    height:30px;
+    line-height:30px;
+    color:#333;
+}
+.nav-children.on .nav-name {
+    color:#ff7e00;
+}
+.nav-children:hover .nav-name {
+    color:#ff7e00;
+}
+.footer {
+    background:#fff;
+    padding:40px 0;
+    margin:90px 0 0 0;
+    position: relative;
+}
+.footer-nav {
+    padding:0 0 0 150px;
+}
+.footer-nav-children {
+    font-size:14px;
+    height:30px;
+    line-height:30px;
+    margin:0 0 0 30px;
+    color:#666;
+    padding:0 16px 0 0;
+    position:relative;
+    cursor:pointer;
+}
+.footer-nav-children .icon {
+    width:11px;
+    height:7px;
+    background:url(../img/icon08.png) no-repeat;
+    position:absolute;
+    right:0;
+    top:50%;
+    margin:-3px 0 0 0;
+}
+.footer-nav-children:hover .icon {
+    background:url(../img/icon08hover.png) no-repeat;
+}
+.footer .copyright {
+    height:30px;
+    line-height:30px;
+    font-size:14px;
+    color:#666;
+}
+/*  头部及底部样式 结束。  */
+
+/* 通用注册页版心 */
+.reg-center {
+    width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    margin-top: 50px;
+    margin-bottom: 19px;
+}
+.step-bk {
+    text-align: center;
+    padding-top: 60px;
+}
+.step-bk .step{
+    padding-left: 80px;
+    height: 70px;
+    font-size: 18px;
+    line-height: 70px;
+    display: inline-block;
+    font-family: "PingFangSC-Regular","Microsoft Yahei";
+}
+.step-bk .phone.active{
+    padding-left: 80px;
+    background: url(../img/reg-phone-active.png) no-repeat center left;
+}
+.step-bk .pwd{
+    padding-left: 80px;
+    background: url(../img/reg-pwd.png) no-repeat center left;
+}
+.step-bk .pwd.active{
+    padding-left: 80px;
+    background: url(../img/reg-pwd-active.png) no-repeat center left;
+}
+.step-bk .finish{
+    padding-left: 80px;
+    background: url(../img/reg-finish.png) no-repeat center left;
+}
+.step-bk .finish.active{
+    padding-left: 80px;
+    background: url(../img/reg-finish-active.png) no-repeat center left;
+}
+.step-bk .log-name.active{
+    padding-left: 80px;
+    background: url(../img/reset-log-name-active.png) no-repeat center left;
+}
+.step-bk .id-verify{
+    padding-left: 80px;
+    background: url(../img/reset-id.png) no-repeat center left;
+}
+.step-bk .id-verify.active{
+    padding-left: 80px;
+    background: url(../img/reset-id-active.png) no-repeat center left;
+}
+.step-bk .rst-pwd{
+    padding-left: 80px;
+    background: url(../img/reset-pwd.png) no-repeat center left;
+}
+.step-bk .rst-pwd.active{
+    padding-left: 80px;
+    background: url(../img/reset-pwd-active.png) no-repeat center left;
+}
+.step-bk .rst-pwd.end{
+    padding-left: 80px;
+    background: url(../img/reset-pwd-end.png) no-repeat center left;
+}
+.step-bk .connect {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 70px;
+    height: 70px;
+    width: 115px;
+    margin-left: 18px;
+    margin-right: 18px;
+    background: url(../img/unprocess.jpg) no-repeat center center;
+}
+.step-bk .processing {
+    display: inline-block;
+    line-height: 70px;
+    height: 70px;
+    background: url(../img/processing.jpg) no-repeat center center;
+}
+.step-bk .processed {
+    display: inline-block;
+    line-height: 70px;
+    height: 70px;
+    background: url(../img/processed.jpg) no-repeat center center;
+}
+.register {
+    width: 100%;
+    margin-top: 35px;
+    font-size: 14px;
+}
+.register .ipt{
+    border: 1px solid #e0e0e0;
+    width: 303px;
+    padding-left: 20px;
+    line-height: 40px;
+    height: 40px;
+    border-radius: 2px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.register .reg-phone {
+    margin-left: 360px;
+}
+.register .reg-verify {
+    margin-left: 348px;
+}
+.register .reg-code {
+    margin-left: 348px;
+    color: #666;
+}
+.register .reg-code .code-ipt{
+    width: 160px;
+    height: 40px;
+}
+.register .reg-code .send-code{
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    text-align: center;
+    background-color: #ff7e00;
+    border: 1px solid #ff7e00;
+    border-radius: 2px;
+    display: inline-block;
+    color: #fff;
+    line-height: 42px;
+}
+.register .reg-code .send-code.disabled{
+    background-color: transparent;
+    border: 1px solid #666;
+    border-radius: 2px;
+    color: #666;
+    cursor: default;
+}
+.register .notice {
+    margin-left: 451px;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #b2b2b2;
+}
+.register .next-step {
+    width: 325px;
+    height: 40px;
+    line-height: 42px;
+    border-radius: 2px;
+    border: 1px solid #ff7e00;
+    background-color: #ff7e00;
+    color: #fff;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+.register .next-step.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+.reg-center {
+    padding-bottom: 65px;
+
+}
+.reg-center .already {
+    display: block;
+    text-align: center;
+    margin:auto;
+    margin-top: 60px;
+    font-size: 16px;
+    color: #666;
+}
+.reg-center .already a{
+    color: #ff7e00;
+}
+
+/* 设置密码 */
+.register .new-pwd,.repeat-pwd {
+    line-height: 40px;
+}
+.register .new-pwd {
+    margin-left: 380px;
+}
+
+.register .new-pwd .notice{
+    margin-left: 62px;
+    font-size: 13px;
+    color: #b2b2b2;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.register .repeat-pwd {
+    margin-left: 355px;
+}
+.register .alert {
+    margin-left: 20px;
+    padding-left: 25px;
+}
+.register .right{
+    background: url(../img/icon-right.png) no-repeat left center;
+    line-height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.register .wrong{
+    background: url(../img/icon-wrong.png) no-repeat left center;
+    line-height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* 重置密码 */
+.register .reset-log-name {
+    margin-left: 372px;
+}
+.register .reset-log-phone {
+    margin-left: 324px;
+    color: #666;
+}
+.register .reset-log-phone span{
+    margin-left: 20px;
+}
+.register .reset-log-phone .not-my-phone {
+    color: #ff7e00;
+    font-size: 12px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.not-found {
+    display: none;
+    padding-left: 85px;
+    height: 70px;
+    width: 435px;
+    margin:auto;
+    margin-top: 128px;
+    background: url(../img/not-found.png) no-repeat left;
+    margin-bottom: 70px;
+}
+.not-found p {
+    font-size: 16px;
+    color: #333;
+    line-height: 35px;
+}
+.not-found p em{
+    color: #ff7e00;
+}
+.reg-center .end-step {
+    padding-top: 110px;
+    margin-top: 80px;
+    text-align: center;
+    background: url(../img/reset-notice.png) no-repeat top center;
+}
+.reg-center .end-step h3 {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    font-family: "PingFangSC-Regular","Microsoft Yahei";
+}
+.reg-center .end-step h4 {
+    font-size: 14px;
+    color: #ff7e00;
+    margin-top: 20px;
+    text-align: center;
+}
+.reg-center .end-step .counting {
+    font-size: 14px;
+    color: #666;
+    margin-top: 40px;
+    text-align: center;
+}
+.reg-center .end-step .reg-end-btn {
+    width: 122px;
+    height: 40px;
+    border: 1px solid #ff7e00;
+    background-color: #ff7e00;
+    line-height: 40px;
+    color: #fff;
+    display: block;
+    margin: auto;
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.reg-center .end-step .counting em{
+    color: #ff7e00;
+    /*text-align: center*/
+}
+
+
+/* 用户登陆首页 */
+.login-bg {
+    background: url('../img/login-bg.jpg') no-repeat center center;
+    height: 626px;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+.login-bg .center {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.login-window {
+    /*height: 411px;*/
+    height: 322px;
+    width: 357px;
+    padding: 35px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+    /*top: 92px;*/
+    top: 110px;
+    right: 0;
+}
+.index-footer {
+    margin: 0;
+}
+.login-window .tit {
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+    font-family: "PingFangSC-Regular","Microsoft Yahei";
+    margin-bottom: 25px;
+}
+.login-window .login-acont {
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+    width: 248px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 60px;
+    margin-top: 20px;
+}
+.login-window .login-acont .ipt{
+    background: none;
+    border: none;
+    outline: none;
+    color:#999;
+}
+.login-window .account {
+    background: url('../img/login-account.jpg') no-repeat left center;
+    margin-top:0;
+}
+.login-window .pwd {
+    background: url('../img/login-pwd.jpg') no-repeat left center;
+}
+.login-window .login-btn {
+    display: block;
+    height: 40px;
+    width: 308px;
+    border-radius: 2px;
+    border: 1px solid #ff7e00;
+    background-color: #ff7e00;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 30px;
+}
+.login-window .method {
+    margin-top: 20px;
+}
+.login-window .method .em.item {
+    border-right: 1px solid #ccc;
+    padding-right: 11px;
+    margin-right: 11px;
+    color: #ff7e00;
+}
+.login-window .method .em {
+    color: #ff7e00;
+}
+.login-window .method .item {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+}
+.login-window .third-way {
+    font-size: 14px;
+    color: #666;
+    display: inline-block;
+    margin-top: 30px;
+}
+.login-window .third-way .icon{
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+    margin-right: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.login-window .third-way .icon img{
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* 滑动块验证码样式修正 */
+.verifier {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.reg-verify .verifier {
+    margin-left: 20px;
+}
+.register .reg-verify {
+    margin-left: 372px;
+    margin-top: 20px;
+}
+
+.hidden{
+	display: none;
+}
+.visible{
+	display: block;
+}
+
+/* 注册协议 */
+.reg-agreementbg{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    opacity: 0.5;
+    filter: alpha(opacity=50) \9;
+    z-index: 9;
+}
+.reg-agreement-container{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    width: 900px;
+    height:600px;
+    margin:-300px 0 0 -450px;
+    z-index: 10;
+    background-color: #f7f7f7;
+}
+.reg-agreement-clos{
+    position: absolute;
+    top:15px;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../img/icon-r-close.png);
+
+}
+.reg-agreement-title{
+    background-color: #fff;
+    padding: 0 0 0 30px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 50px;
+
+}
+.reg-agreement-title h2{
+    font-size: 18px;
+    color: #333;
+}
+.reg-agreement-content{
+    width: 798px;
+    height: 420px;
+    overflow-y:scroll;
+    margin: 30px auto 0;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    padding: 12px 20px 12px 20px;
+
+}
+.reg-agreement-content p{
+    line-height: 24px;
+    font-size: 14px;
+}
+.reg-agreement-content p b{
+    font-weight: bold;
+}
+.server-agreement{
+    padding: 10px 0 0 0;
+}
+.server-agreement h3 a{
+    color: #ff7e00;
+    font-size: 16px;
+    line-height: 18px;    
+}
+.reg-agreement-text .p-text-indent{
+	text-indent: 28px;
+}
+.reg-agreement-text h2{
+	font-size: 16px;
+	font-weight: bold;
+}
+.reg-agreement-text p.content{
+	line-height: 24px;
+	color: #333;
+    font-size: 14px;
+}
+
+.reg-agreement-text .container{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.reg-agreement-text .container h2{
+	font-size: 14px;
+	font-weight:100;
+	color: #333;
+    line-height: 28px;
+}
+
+.reg-items{
+    padding: 8px 0 8px 0;
+}
+.reg-items:after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.reg-items li{
+    float: left;
+    width:390px;
+    color: #666;
+    font-size:14px;
+    padding: 8px 0 8px 0;
+    height: 16px;
+}
+.reg-agreement-content p.reg-agreement-text-p{
+    padding: 10px 0 0 0;
+}
+.reg-agreement-content p.reg-agreement-text-p a{
+    color: #2577e3;
+    text-decoration: underline;
+    font-size: 12px;
+}
+.reg-agreement-bot{
+    width: 300px;
+    height: 40px;
+    margin: 15px auto 0;
+}
+.reg-agreement-bot a{
+    width: 130px;
+    height: 38px;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+}
+.reg-agreement-bot a.no-agree{
+    float: left;
+    border: 1px solid #e6e6e6;
+    color: #666;
+}
+.reg-agreement-bot a.to-agree{
+    float: right;
+    color: #fff;
+    background-color: #FF9A14;
+     border: 1px solid #FF9A14;
+}
+
+.login-window .alert {
+    margin-left: 5px;
+    padding-left: 20px;
+    margin-top:8px;
+    display: inline-block;
+    font-size: 12px;
+    color: #ff7e00;
+    font-size: 14px;
+    position: absolute;
+    top: 56px;
+    left: 45px;
+}
+.login-window .wrong{
+    background: url(../img/icon-wrong.png) no-repeat left center;
+    background-size: 14px 14px;
+    line-height: 14px;
+    padding-left: 25px \9;
+    line-height: 20px \9;
+    margin-bottom: 0px;
+}
+.login-window .method .em.item{
+    color: #ff7e00;
+}
+.login-window{
+    width: 310px;
+}
+.reset-log-titl{
+    margin:0 0 25px 310px;
+    color: #333;
+    line-height: 16px;
+    font-size: 15px;
+}
+/* 11.25 */ 
+.pop-up{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:11;    
+    display: none;
+}
+.pop-up .opa {
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    border-radius: 7px;
+}
+.pop-up .txt-box {
+    width:550px;
+    height: auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    padding-bottom: 40px;
+    margin:-160px 0 0 -275px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px #333;
+    -webkit-box-shadow: 4px 4px 10px #333;
+    background:#fff;
+}
+.pop-up .icon {
+    width:70px;
+    margin:50px auto 20px;
+}
+.pop-up .txt {
+    font-size:20px;
+    text-align:center;
+    color:#333;
+    padding:0 0 0 15px;
+}
+.pop-up .enter-btn {
+    display:block;
+    width:140px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-size:16px;
+    color:#666;
+    border:1px solid #ccc;
+    border-radius:21px;
+    margin:40px auto 0;
+}
+.pop-up .enter-btn:hover {
+    background:#ff7e00;
+    color:#fff;
+    border:1px solid #ff7e00;
+}
+
+/* 11.25 */
+.ft-vertical-block {
+    float: left;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-left: 30px;
+    margin-left: 165px;
+}
+.nav-tk{padding-top: 14px; position:absolute; bottom:-11px;}
+.nav-tk li{display:inline-block; font-size:14px; color:#666; margin-right:0px; cursor:pointer; background: #fff;padding:15px 20px 15px; }
+.nav-tk li.cur{box-shadow:1px 1px 12px rgba(0,0,0,.2);-moz-box-shadow:1px 1px 12px rgba(0,0,0,.2);-webkit-box-shadow:1px 1px 12px rgba(0,0,0,.2);}
+.nav-tk li.last.cur{box-shadow:none;-moz-box-shadow:none;-webkit-box-shadow:none;}
+.nav-tk li em{display:block;background:url(../img/icon08.png) no-repeat right center; padding-right:20px; }
+.nav-tk li.cur em{background:url(../img/icon08hover.png) no-repeat right center;}
+.ft-morelist{text-align: center;display:none;}
+.ft-morelist span{display:block; line-height:30px;}
+.ft-morelist span a{ color:#999; font-size:14px;}
+.ft-morelist span a:hover{color:#ff7e00;}
+.footer .fl{ float: left; }
+.footer a{ color: #bcbcbc }
+.footer em a{color:#666;}
+.nav-tk li.last em{ background:none;}
+.footer .nav-tk li.last a{color:#666;}
+.copy-cont{font-size:12px; color:#999;padding-top: 16px;}
+.ipt{color: #999;}
+.register .next-step.disabled {
+    filter:alpha(opacity=50) \9;
+}
+/* 11.27 */
+a:focus{outline:none;} 
+.reg-center{color: #666;}
+.reg-center .step-bk{
+    color: #333;
+}
+.footer{
+    *zoom:1;
+}
+.user-agreement{
+    padding: 20px 0;
+}
+.user-agreement h3{
+    text-align: center;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    padding-bottom: 12px;
+    color: #333;
+}
+.user-agreement p{
+    text-indent: 28px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #333;
+    padding: 15px 0 15px 0;
+}
+.user-agreement p.reg-agreement-text-p-last{
+    padding-top: 25px;
+    color: #ff7e00;
+}
+.reg-agreement-content{
+    overflow-y: auto;
+}
+.login-error-password {
+    width: 220px;
+    height: 131px;
+    background: url(../img/lock_background.png) no-repeat;
+    z-index: 1000;
+}
+.login-error-password-position{
+	position: absolute;
+	top: 131px;
+    left: 81px;
+}
+.login-error-password img{
+	position: relative;
+    top: 16px;
+    left: 85px;
+    padding-bottom: 28px;
+}
+.login-error-password p,.login-error-out-time p{
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+	text-align: center;
+}
+.login-error-out-time{
+	width: 235px;
+    height: 125px;
+    background: url(../img/error_background.png) no-repeat;
+    padding: 24px 0;
+    z-index: 1000;
+}
+.login-out-time-position{
+	position: absolute;
+    top: 136px;
+    left: 76px;
+}
+.login-error-out-time .btn{
+	display: inline-block;
+    width: 84px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+.login-error-out-time .reset_btn {
+    margin: 20px 20px 0;
+    border:1px solid #FF7E00;
+    color:#FF7E00;
+}
+
+.login-error-out-time .retry_btn {
+    border:1px solid #ccc;
+    color:#666;   
+}
+.login-error-out-time .reset_btn:hover {
+    background:#ff7e00;
+    color:#fff;
+}
+.reg-login-errorpassword-position{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.login-window .disabled{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+    cursor: default;
+}

@@ -1,0 +1,78 @@
+<div class="lr-center clearfix">
+    <h1 class="logo-tit">
+        <a href="javascript:;" title="泰康人寿">泰康人寿</a>
+    </h1>
+    <div class="ft-vertical-block">
+        <ul class="nav-tk clearfix">
+                <li class="">
+                <div class="ft-morelist" style="display: none;">
+                        <span><a href="medicalhealth" class="product" title="">医疗健康</a></span>
+                        <span><a href="accident" class="product"  title="" >出行意外</a></span>
+                        <span><a href="socialstatus" class="product"  title="" >身价保障</a></span>
+                        <span><a href="childeducation" class="product"  title="" >子女教育</a></span>
+                        <span><a href="humpsavings" class="product" title="" >养老储蓄</a></span>
+                        <span><a href="fundapplication" class="product" title="">资金运用</a></span>
+                    </div>
+                <em>
+                <a href="http://www.taikanglife.com/insuranceProduct.html" target="_blank">保险产品</a>
+                </em>   
+                </li>
+                <!-- 客户服务  -->
+                <li class="">
+                <div class="ft-morelist" style="display: none;">
+                        <span><a href="http://www.taikanglife.com/service/searchservice/branchoffice/tk_comSeacher.html" title="" target="_blank">查询服务</a></span>
+                        <span><a href="http://www.taikanglife.com/service/customerservice/settleclaim/settlenews/settlenews.html" title="" target="_blank">理赔服务</a></span>
+                        <span><a href="http://www.taikanglife.com/service/customerservice/life_protectService.html" target="_blank" title="">保全服务</a></span>
+                        <span><a href="http://www.taikanglife.com/service/customerservice/list_229_1.html" title="" target="_blank">单证下载</a></span>
+                        <span><a href="http://www.taikanglife.com/service/customerservice/insuranceknow/list_230_1.html" title="" target="_blank">保险知识</a></span>
+                        <span><a href="http://www.taikanglife.com/service/customerservice/commonproblem/list_241_1.html" title="" target="_blank">常见问题</a></span>
+                        <span><a href="http://ecs.taikang.com/eservice/login/login.jsp" target="_blank" title="">其它服务</a></span>
+                    </div>
+                <em>
+                <a href="http://www.taikanglife.com/tk_customerService.html" target="_blank">客户服务</a>
+                </em>
+                </li>
+                <!-- 关于泰康 -->
+                <li class="">
+                <div class="ft-morelist" style="display: none;">
+                        <span><a href="http://www.taikanglife.com/about/news/list_249_1.html" title="" target="_blank">新闻中心</a></span>
+                        <span><a href="http://www.taikanglife.com/about/activityevent/list_251_1.html" title="" target="_blank">活动公告</a></span>
+                        <span><a href="http://www.taikanglife.com/about/socialdutys/list_300_1.html" title="" target="_blank">社会责任</a></span>
+                        <span><a href="http://www.taikanglife.com/about/life_contactUs.html" title="" target="_blank">联系我们</a></span>
+                    </div>
+                <em>
+                <a href="http://www.taikanglife.com/about/news/list_249_1.html"  target="_blank">关于我们</a>
+                </em></li>
+                <!--公开信息披露-->
+                <li class="last">
+                <em>
+                <a href="http://www.taikanglife.com/publicinfo.html" target="_blank">公开信息披露</a>
+                </em>
+                </li>
+                <!--加入泰康-->
+                <li class="last">
+                    <em><a href="http://www.hotjob.cn/wt/Taikang/web/index" target="_blank" title="">加入我们</a></em>
+                </li>
+        </ul>
+    </div>
+    <p class="copyright fr">泰康人寿  www.taikanglife.com  京ICP备09074081号-2</p>
+</div>
+
+<script type="text/javascript">
+    //11.25 公共底部 hover事件
+    $(document).ready(function(){
+        $('.nav-tk li').hover(function(){   
+            $(this).addClass("cur").find('.ft-morelist').show();
+        },function(){
+            $(this).removeClass("cur").find('.ft-morelist').hide();
+        });
+        
+        $('.product').on("click",function(e){
+        	debugger;
+        	e.preventDefault();
+        	
+        	window.open("http://10.130.206.179/products/insuranceList.html#"+$(this).attr("href"),"_blank");
+        	//window.location.href="http://10.130.206.179/products/insuranceList.html";
+        });
+    });
+</script>

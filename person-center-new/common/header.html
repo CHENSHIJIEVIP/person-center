@@ -1,0 +1,54 @@
+<div class="top">
+    <div class="lr-center clearfix">
+        <p class="notice fl"><i class="icon"></i>公告：泰康人寿将于2017.12.31晚6点至2018.1.1早7点进行系统升级，届时官网服务将暂停，敬请谅解。</p>
+        <div class="user-box fr clearfix">
+            <div class="user-wel fl">
+                <span class="user-name">张三</span>
+                <span> ,欢迎你！</span>
+            </div>
+            <a href="#/account-verify" class="user-admin fl">账号管理</a>
+            <p class="col-line fl">|</p>
+            <a href="login.html" class="logout">退出</a>
+        </div>
+    </div>
+</div>
+<div class="lr-center clearfix">
+    <h1 class="logo-tit">
+        <a href="javascript:;" title="泰康人寿">泰康人寿</a>
+    </h1>
+    <ul class="nav fr clearfix">
+        <li class="nav-children fl on">
+            <a class="nav-name" href="index.html">用户首页</a>
+        </li>
+        <li class="nav-children fl">
+            <a class="nav-name" href="#/summary">业务办理</a>
+        </li>
+        <li class="nav-children fl disshow">
+            <a class="nav-name" href="javascript:;">交费</a>
+        </li>
+        <li class="nav-children fl disshow">
+            <a class="nav-name" href="javascript:;">理赔</a>
+        </li>
+        <li class="nav-children fl disshow">
+            <a class="nav-name" href="javascript:;">预约</a>
+        </li>
+        <li class="nav-children fl disshow">
+            <a class="nav-name" href="javascript:;">在线客服</a>
+        </li>
+        <li class="nav-children fl">
+            <a class="nav-name" href="http://www.taikanglife.com">返回官网</a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.nav .nav-children .nav-name').on('click', function() {
+            window.HeaderMenu={ "name":$(this).text(),url:$(this).attr("href")};
+            $(this).parent().addClass('on').siblings('.nav-children').removeClass('on');
+        })
+    });
+    $(".notice i").on('click',function(){
+    	$(this).parent().hide();
+    });
+    
+</script>

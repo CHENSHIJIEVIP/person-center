@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>泰康 · 欢迎登录</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/verify.css">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src='lib/jquery.placeholder.min.js'></script>
+		<script type="text/javascript" src="lib/verify.min.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="lr-center clearfix">
+				<h1 class="logo-tit">
+                <a href="http://www.taikanglife.com/index.html" title="泰康人寿">泰康人寿</a>
+            </h1>
+				<h2>欢迎登录</h2>
+			</div>
+		</div>
+		<div class="login-bg">
+			<div class="center">
+				<div id="login-window" class="login-window">
+					
+					<h2 class="tit">用户登录</h2>
+					<span class="alert"></span>
+					<div class="login-acont account"><input type="text" name="logphone" placeholder="手机号" class="ipt ipt-phone">
+						<!--<span class="alert"></span>--></div>
+					<div class="login-acont pwd"><input type="password" name="logPassword" placeholder="密码" class="ipt ipt-pwd"></div>
+					<div class="verifier" id="verifier" style="margin-top: 20px;"></div>
+					<a href="index.html" class="login-btn disabled">登录</a>
+					<div class="method">
+						<a href="./reset_pwd.html" class="em item">找回密码</a>
+						<span class="item">还不是会员？<a href="./reg.html" class="em" style="font-size: 16px;font-weight: bold;">立即注册</a></span>
+					</div>
+					<div> <input type="hidden"  value="divId" id="divID" / ></div>
+					<!-- <div class="third-way">
+                    <span>您还可以使用以下方式登录:<a href="" class="icon"><img src="img/login-third-wechat.png"></a></span>
+                    </div>-->
+                    <div class="login-error-password-position login-error-password disshow">
+                    	<img src="img/a-forbid.png"/>
+                    	<p>已输入5次错误密码！</p>
+                    	<p>账户已锁定，次日自动解锁。</p>
+                    </div>
+                    <div class="login-out-time-position login-error-out-time disshow">
+                    	<p>密码错误，请重试！</p>
+                    	<p>输入5次错误密码，账户将锁定。</p>
+                    	<a href="./reset_pwd.html" class="btn reset_btn">找回密码</a> 
+                    	<a href="javascript:;" class="btn retry_btn">重试</a>
+                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="footer index-footer"></div>
+	</body>
+
+</html>
+<script type="text/javascript">
+   /*	
+	//加载页脚文件
+	$.get("common/footer.html", function(data) {
+		$(".footer").html(data);
+	});
+
+	var isCheckVerifier = false;
+	//清除警告信息
+	function clearAlarm() {
+		$('.login-window >span').text('').removeClass('right').removeClass('wrong');
+	}
+	//设置警告信息
+	function showAlarm(info) {
+		var ss = $('.login-window >span');
+		$('.login-window >span').text(info).removeClass('right').addClass('wrong');
+	}
+	$('.verifier').slideVerify({
+		type: 2, //类型
+		vOffset: 5, //误差量，根据需求自行调整
+		vSpace: 5, //间隔
+		imgSize: {
+			width: '308px',
+			height: '160px',
+		},
+		blockSize: {
+			width: '40px',
+			height: '40px',
+		},
+		barSize: {
+			width: '308px',
+			height: '40px',
+		},
+		ready: function() {},
+		success: function() {
+			alert('验证成功，添加你自己的代码！');
+			isCheckVerifier = true;
+			if($('.login-window>span').text() == "请从左到右移动滑块！") {
+				clearAlarm();
+			}
+			//......后续操作
+		},
+		error: function() {
+			alert('验证失败！');
+		}
+	});
+	//验证手机号码
+	$(".ipt-phone").on('blur', function() {
+		var phone = $(".ipt-phone").val();
+		if(!(/^1[34578]\d{9}$/.test(phone))) {
+			showAlarm('手机号格式错误！');
+			if(phone === "")
+				showAlarm('手机号不能为空！');
+		} else
+			clearAlarm();
+	});
+	$('.login-window input').bind('input propertychange', function() {
+		clearAlarm();
+	});
+
+	$('.login-btn').on('click', function(e) {
+		var obj = e.target || e.srcElement,
+			step = obj.parentNode.id;
+		var phone = $(".ipt-phone").val(),
+			password = $(".ipt-pwd").val();
+		if(!checkNull(step) || isCheckVerifier == false) {
+			e.preventDefault();
+			if(phone == "" || password == "") {
+				showAlarm('手机号或密码不能为空！');
+				return;
+			}
+			if(isCheckVerifier == false) {
+				showAlarm('请从左到右移动滑块！');
+				return;
+			}
+		}
+		debugger;
+		$.ajax( {
+			type : "get",
+			url : "data/a.json",
+			async : false,
+			success : function(data) {
+				debugger;
+				e.preventDefault();
+				debugger;
+				showAlarm(data.user);
+	
+			},
+			
+		});	
+	});
+	
+	//密码错误的重试时间
+	$('.retry_btn').on('click',function(){
+		$(".login-error-out-time").removeClass("disshow").addClass("disshow");
+		$('.ipt-pwd').focus();
+	})*/
+</script>
+<script src="js/login2.js"></script>
